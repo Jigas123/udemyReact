@@ -9,7 +9,6 @@
 }
 .how-udemy-works__col {
     padding: 30px 0 30px 0;
-    width: 45%;
 }
 .fx-lt, .fxw {
     display: flex;
@@ -22,8 +21,6 @@
 .how-udemy-works__icon {
     color: #fff;
     float: left;
-    margin-right: 16px;
-    marginTop: -2px;
     font-size: 47px;
     height: 1em;
 }
@@ -32,8 +29,6 @@
     color: #fff;
     float: left;
     display: none;
-    margin-right: 16px;
-    marginTop: -2px;
     font-size: 47px;
     height: 1em;
     background: url('../../Asset/images (3).png');
@@ -43,8 +38,6 @@
     color: #fff;
     float: left;
     display: none;
-    margin-right: 16px;
-    marginTop: -2px;
     font-size: 47px;
     height: 1em;
     background: url('../../Asset/695ae8cc9d.svg');

@@ -3,6 +3,7 @@ import {Media} from "reactstrap";
 import {createBrowserHistory} from 'history';
 import {withRouter} from 'react-router-dom';
 import poster from '../Asset/slider.png';
+import './Coursesmapped.css';
 
 const history = createBrowserHistory();
 
@@ -25,7 +26,7 @@ class CoursesMapped extends Component{
             let price = parseInt(course.price);
             let offer = parseInt(course.offer);
             let discount = parseInt(price - ((price * offer) / 100));
-            return(<Media className="main-wrap" key={index}>
+            return(<Media className="main-wrap adminCourse" key={index}>
                 <Media left>
                     <Media object src={poster} height="100px" width="100px"/>
                 </Media>
@@ -34,14 +35,17 @@ class CoursesMapped extends Component{
                         <div className='course-wrap'>
                             <div className='d-flex flex-column w-75'>
                                 <p>{course.course_Name}</p>
-                                <p className="instructorName">{course.created_By}</p>
+                                <p className="instructorName">{course.created_By.join(',')}</p>
                             </div>
                             <div className='d-flex flex-column remove-text'>
                                 <p><a onClick={(event) =>that.courseDetail(event,course)}>{"Detail"}</a></p>
                             </div>
                             <div className='price-list'>
                                 <p>{discount}</p>
-                                <p><strike>{price}</strike></p>
+                                {discount === price ? null
+                                    :
+                                    <p><strike>{price}</strike></p>
+                                }
                             </div>
                         </div>
                     </Media>

@@ -2,8 +2,10 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import { Tabs, Tab } from 'react-bootstrap';
 import {Input} from 'reactstrap';
-
+import {bindActionCreators} from 'redux';
+import * as instructorDetailAction from '../action/instructorDetail';
 import Courses from "./courses";
+
 
 
 class TabSlider extends Component {
@@ -23,7 +25,18 @@ class TabSlider extends Component {
         if(key != this.state.key){
             this.setState({key});
         }
-        console.log("set state........",this.state.key);
+    }
+
+    getAllInstructor = () => {
+        const that = this;
+        console.log(this.props.instructor.AllInstructor.length);
+            if (this.props.instructor.AllInstructor.length > 0) {
+                this.props.instructor.AllInstructor.map(function (instructor, index) {
+                    that.instructorArray.push(<option key={index}>
+                        {instructor.name}</option>);
+                })
+            }
+            return this.instructorArray;
     }
 
     getAllcategory(){
@@ -41,9 +54,7 @@ class TabSlider extends Component {
                     categoryFilter.push(category.name);
                     let ctgryTopic = [];
                     subcategoryFilter.map(function (subtopic, index) {
-                        console.log("my topic Array............", subtopic);
                         subtopic.subcategory.map(function (topic, index) {
-                            console.log("my topic............", topic.name);
                             ctgryTopic.push(topic.name);
                         })
                     });
@@ -65,49 +76,36 @@ class TabSlider extends Component {
         }
     }
 
-    instructorSelect = (e) => {
+    instructorSelect = async (e) => {
         e.preventDefault();
         console.log("event triggered",e.target.value);
         if(e.target.value == 'Select Instructor')
-            this.setState({instructor:null})
+            await this.setState({instructor:null})
         else
-            this.setState({instructor:e.target.value});
-    }
-
-    getAllInstructor = () => {
-        const that = this;
-        if (this.props.instructor.AllInstructor.length > 0) {
-            this.props.instructor.AllInstructor.map(function (instructor, index) {
-                console.log("instructor...", instructor._id + " " + instructor.name);
-                that.instructorArray.push(<option>
-                    {instructor.name}</option>);
-            })
-        }
-        return this.instructorArray;
+            await this.setState({instructor:e.target.value});
     }
 
     render () {
-
         return(
-
             <div>{this.state.instructor == null ? (
                 <Tabs onSelect={this.handleSelect}
                       id="controlled-tab-example">
                     {this.getAllcategory()}
                 </Tabs>
             ) : null}
-
-                <div className='d-inline-flex'>
+            <div className='container-fluid'>
+                <div className='row'>
                     <div className='col-md-8'>
                         <Courses topic={this.state.key} instructor={this.state.instructor}/>
                     </div>
-                    <div className='col-md-4'>
+                    <div className='col-md-4 instructor'>
                         <Input type="select" name="instructorSelect" id="instructorSelect" onChange={(event) => this.instructorSelect(event)}>
                             <option value={null}>Select Instructor</option>
                             {this.getAllInstructor()}
                         </Input>
                     </div>
                 </div>
+            </div>
             </div>
         );
     }
@@ -122,4 +120,10 @@ const mapStateToProps = (state) => {
     }
 };
 
-export default connect(mapStateToProps)(TabSlider);
+const mapDispatchToProps = dispatch => ({
+    action:{
+        instructorDetail : bindActionCreators(instructorDetailAction,dispatch)
+    }
+})
+
+export default connect(mapStateToProps,mapDispatchToProps)(TabSlider);

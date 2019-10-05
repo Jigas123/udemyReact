@@ -2,15 +2,105 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c99b5a08-896d-4912-a3f3-b8839967a61f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/App/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/courses/addToCart.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/header/AdminRegister.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/header/searchableData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/udemy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/udemy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Allcss/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Allcss/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/addCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/addCourse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/addCourseVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/addCourseVideo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/addInstructor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/addInstructor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/categorydetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/categorydetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/coursedetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/coursedetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/filterTopic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/filterTopic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/instructorDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/instructorDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/subCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/subCategory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/userCartItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/userCartItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/userRegisterLog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/userRegisterLog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/admin/Coursesmapped.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/Coursesmapped.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/admin/addCourse.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/addCourse.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/admin/addCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/addCourse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/admin/addCourseVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/addCourseVideo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/admin/addInstructor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/addInstructor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/admin/adminDashbord.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/adminDashbord.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/admin/adminNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/adminNavbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/admin/courses.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/courses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/admin/instructorCourses.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/instructorCourses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/admin/tab_Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/tab_Slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anauthorize/anauthorize.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/anauthorize/anauthorize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anauthorize/anauthorize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/anauthorize/anauthorize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/App/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/App/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/banner/topicBanner.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/banner/topicBanner.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/banner/topicBanner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/banner/topicBanner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/card-slider/cardSlider.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/card-slider/cardSlider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/card-slider/cardSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/card-slider/cardSlider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/courses/Checkout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/Checkout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/courses/Checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/Checkout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/courses/Course.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/Course.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/courses/CourseInDetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/CourseInDetail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/courses/CourseInDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/CourseInDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/courses/Courses.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/Courses.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/courses/Courses.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/Courses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/courses/ShoppingCart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/ShoppingCart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/courses/ShoppingCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/ShoppingCart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/courses/addToCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/addToCart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/courses/coursesSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/coursesSlider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/courses/instructor.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/instructor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/courses/instructor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/instructor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/courses/popularTopic.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/popularTopic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/courses/popularTopic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/popularTopic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/customRoute/customRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/customRoute/customRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/filter/filter.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/filter/filter.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/filter/filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/filter/filter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/footer/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/footer/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/footer/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/footer/footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/header/facebook.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/header/facebook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/header/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/header/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/header/loginModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/header/loginModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/header/registerModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/header/registerModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/learnexample/popover.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/learnexample/popover.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/learnexample/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/learnexample/slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/learnexample/tab_example.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/learnexample/tab_example.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/slidar/slidar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/slidar/slidar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/slidar/slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/slidar/slider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/slidar/subslider.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/slidar/subslider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/slidar/subslider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/slidar/subslider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/slidar/tab_Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/slidar/tab_Slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/topic/Topic.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/topic/Topic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/topic/Topic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/topic/Topic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/topic/topic_In_Media.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/topic/topic_In_Media.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/topic/topic_In_Media.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/topic/topic_In_Media.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/payment/CardForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/CardForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/payment/payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/payment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/addCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/addCourse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/addInstructor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/addInstructor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/categorydetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/categorydetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/courses.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/courses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/filterTopic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/filterTopic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/instructor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/instructor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/subCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/subCategory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/userCartItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/userCartItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/userRegisterLog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/userRegisterLog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/addCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/addCourse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/addCourseVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/addCourseVideo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/addInstructor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/addInstructor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/basicService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/basicService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/categorydetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/categorydetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/coursedetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/coursedetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/instructorDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/instructorDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/subCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/subCategory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/userRegisterLog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/userRegisterLog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/.tmp/" />
-    <ignored path="$PROJECT_DIR$/temp/" />
-    <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,217 +110,16 @@
   <component name="FavoritesManager">
     <favorites_list name="udemy" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/admin/addCourse.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6534">
-              <caret line="363" column="19" selection-start-line="293" selection-start-column="12" selection-end-line="363" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/admin/addCourse.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/admin/addCourseVideo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="828">
-              <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/admin/tab_Slider.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
-              <caret line="88" column="15" selection-start-line="88" selection-start-column="15" selection-end-line="88" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/admin/instructorCourses.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="16" column="5" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/container/header/header.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1800">
-              <caret line="100" column="28" lean-forward="true" selection-start-line="100" selection-start-column="28" selection-end-line="100" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/admin/Coursesmapped.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
-              <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/admin/adminNavbar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="21" column="56" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="56" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/admin/addInstructor.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>ontopic</find>
-      <find>courseContent</find>
-      <find>techId</find>
-      <find>this.instructor</find>
-      <find>instructor</find>
-      <find>this.techId</find>
-      <find>this.courseContent</find>
-      <find>this.instructor_id</find>
-      <find>this.instructorArray</find>
-      <find>this.getSubcategory</find>
-      <find>that.getSubcategory</find>
-      <find>this.SubcategoryMapped</find>
-      <find>this.instructorMapped</find>
-      <find>valu</find>
-      <find>value</find>
-      <find>select</find>
-      <find>params</find>
-      <find>FormText</find>
-      <find>registerLog</find>
-      <find>main-checkout-wrap</find>
-      <find>logo</find>
-      <find>/addcourse/</find>
-      <find>/addcourse/addvideo/</find>
-      <find>this.props.categorydetail</find>
-      <find>this.props.topic</find>
-      <find>this.props.courses</find>
-      <find>userRegisterLog</find>
-      <find>All</find>
-      <find>debugger</find>
-      <find>this.props.userRegisterLog</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>this</replace>
-      <replace>Cart</replace>
-      <replace>window.Stripe</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/reducer/userRegisterLog.js" />
-        <option value="$PROJECT_DIR$/src/payment/payment.js" />
-        <option value="$PROJECT_DIR$/src/container/footer/footer.css" />
-        <option value="$PROJECT_DIR$/src/container/footer/footer.js" />
-        <option value="$PROJECT_DIR$/src/container/courses/Checkout.css" />
-        <option value="$PROJECT_DIR$/src/payment/CardForm.js" />
-        <option value="$PROJECT_DIR$/src/reducer/subCategory.js" />
-        <option value="$PROJECT_DIR$/src/service/subCategory.js" />
-        <option value="$PROJECT_DIR$/src/action/subCategory.js" />
-        <option value="$PROJECT_DIR$/src/container/courses/contentForm.js" />
-        <option value="$PROJECT_DIR$/src/reducer/addCourse.js" />
-        <option value="$PROJECT_DIR$/src/service/addCourse.js" />
-        <option value="$PROJECT_DIR$/src/admin/addCourse.css" />
-        <option value="$PROJECT_DIR$/src/action/addCourse.js" />
-        <option value="$PROJECT_DIR$/src/admin/contentForm.js" />
-        <option value="$PROJECT_DIR$/src/service/addCourseVideo.js" />
-        <option value="$PROJECT_DIR$/src/action/addCourseVideo.js" />
-        <option value="$PROJECT_DIR$/src/action/userRegisterLog.js" />
-        <option value="$PROJECT_DIR$/src/service/userRegisterLog.js" />
-        <option value="$PROJECT_DIR$/src/anauthorize/anauthorize.js" />
-        <option value="$PROJECT_DIR$/src/anauthorize/anauthorize.css" />
-        <option value="$PROJECT_DIR$/src/container/courses/Checkout.js" />
-        <option value="$PROJECT_DIR$/src/container/courses/Course.js" />
-        <option value="$PROJECT_DIR$/src/container/header/registerModel.js" />
-        <option value="$PROJECT_DIR$/src/container/header/loginModel.js" />
-        <option value="$PROJECT_DIR$/src/admin/adminNavbar.js" />
-        <option value="$PROJECT_DIR$/src/service/instructorDetail.js" />
-        <option value="$PROJECT_DIR$/src/service/addInstructor.js" />
-        <option value="$PROJECT_DIR$/src/reducer/index.js" />
-        <option value="$PROJECT_DIR$/src/action/addInstructor.js" />
-        <option value="$PROJECT_DIR$/src/reducer/addInstructor.js" />
-        <option value="$PROJECT_DIR$/src/admin/adminDashbord.js" />
-        <option value="$PROJECT_DIR$/src/container/slidar/tab_Slider.js" />
-        <option value="$PROJECT_DIR$/src/container/courses/addToCart.js" />
-        <option value="$PROJECT_DIR$/src/container/topic/topic_In_Media.js" />
-        <option value="$PROJECT_DIR$/src/container/courses/ShoppingCart.js" />
-        <option value="$PROJECT_DIR$/src/admin/CourseInDetail.js" />
-        <option value="$PROJECT_DIR$/src/container/courses/CourseInDetail.js" />
-        <option value="$PROJECT_DIR$/src/container/customRoute/customRoute.js" />
-        <option value="$PROJECT_DIR$/src/admin/instructorCourses.js" />
-        <option value="$PROJECT_DIR$/src/admin/Coursesmapped.js" />
-        <option value="$PROJECT_DIR$/src/admin/courses.js" />
-        <option value="$PROJECT_DIR$/src/container/App/App.js" />
-        <option value="$PROJECT_DIR$/src/admin/tab_Slider.js" />
-        <option value="$PROJECT_DIR$/src/reducer/instructor.js" />
-        <option value="$PROJECT_DIR$/src/action/instructorDetail.js" />
-        <option value="$PROJECT_DIR$/src/admin/addCourse.js" />
-        <option value="$PROJECT_DIR$/src/admin/addCourseVideo.js" />
-        <option value="$PROJECT_DIR$/src/admin/addInstructor.js" />
-        <option value="$PROJECT_DIR$/src/container/header/header.js" />
-        <option value="$PROJECT_DIR$/src/admin/AddCourses.js" />
-      </list>
-    </option>
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -238,111 +127,12 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/udemy.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-        <option value="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="20" />
-    <option name="width" value="1346" />
-    <option name="height" value="688" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="udemy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="udemy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="udemy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="udemy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="udemy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="udemy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="action" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="udemy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="udemy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="udemy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="udemy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="container" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="udemy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="udemy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="container" type="462c0819:PsiDirectoryNode" />
-              <item name="App" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="udemy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="udemy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="container" type="462c0819:PsiDirectoryNode" />
-              <item name="courses" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="udemy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="udemy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="container" type="462c0819:PsiDirectoryNode" />
-              <item name="customRoute" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="udemy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="udemy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="container" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="udemy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="udemy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="container" type="462c0819:PsiDirectoryNode" />
-              <item name="header" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="udemy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="udemy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="payment" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
+  <component name="ProjectId" id="1RHRrlKg7BRJDeWwsSai66cbexQ" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../node js/udemy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -353,20 +143,20 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.1.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\jigar\react js\udemy\src" />
+      <recent name="D:\jigar\react js\udemy\src\Asset" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\jigar\react js\udemy\src\admin" />
       <recent name="D:\jigar\react js\udemy\src\container" />
       <recent name="D:\jigar\react js\udemy\src\container\customRoute" />
       <recent name="D:\jigar\react js\udemy\src" />
       <recent name="D:\jigar\react js\udemy\src\container\App" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\jigar\react js\udemy\src" />
-      <recent name="D:\jigar\react js\udemy\src\Asset" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -439,11 +229,24 @@
       <workItem from="1568872879948" duration="29142000" />
       <workItem from="1568959021271" duration="35460000" />
       <workItem from="1569045683338" duration="24658000" />
+      <workItem from="1569218444817" duration="29538000" />
+      <workItem from="1569322240557" duration="20501000" />
+      <workItem from="1569391057090" duration="33887000" />
+      <workItem from="1569478415388" duration="31228000" />
+      <workItem from="1569565168936" duration="29324000" />
+      <workItem from="1569651472991" duration="22231000" />
+      <workItem from="1569753701138" duration="11810000" />
+      <workItem from="1569825695410" duration="28979000" />
+      <workItem from="1569912078076" duration="31718000" />
+      <workItem from="1569996397126" duration="34569000" />
+      <workItem from="1570083593134" duration="14653000" />
+      <workItem from="1570101144905" duration="1364000" />
+      <workItem from="1570103488645" duration="11833000" />
+      <workItem from="1570171166217" duration="28406000" />
+      <workItem from="1570202328153" duration="14240000" />
+      <workItem from="1570261790800" duration="5628000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1057882000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -454,424 +257,20 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.09949303" />
-      <window_info id="Structure" order="1" sideWeight="0.5021834" side_tool="true" weight="0.14068441" />
-      <window_info id="npm" order="2" side_tool="true" />
-      <window_info id="Favorites" order="3" sideWeight="0.502439" side_tool="true" weight="0.15145755" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32974428" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.04037685" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.22341858" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.15612382" />
-      <window_info anchor="bottom" id="TypeScript" order="11" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.12040558" />
-      <window_info id="Structure" order="1" sideWeight="0.5021834" side_tool="true" weight="0.14068441" />
-      <window_info id="npm" order="2" side_tool="true" />
-      <window_info id="Favorites" order="3" sideWeight="0.502439" side_tool="true" weight="0.15145755" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32974428" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.04037685" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.22341858" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32032302" />
-      <window_info anchor="bottom" id="TypeScript" order="11" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Asset/history-1440167-1214668.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Asset/entry-default.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Asset/695ae8cc9d.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Asset/logo-coral.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Asset/images__1__kLO_icon.ico">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Asset/images__1__51T_icon (1).ico">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/courses/Courses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="49" column="33" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/footer/footer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Asset/slider.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/header/loginModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="101" column="35" lean-forward="true" selection-start-line="101" selection-start-column="35" selection-end-line="101" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/categorydetail.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/coursedetail.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/subCategory.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/instructorDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="56" lean-forward="true" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/addInstructor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="62" lean-forward="true" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/action/addCourse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-82">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducer/addInstructor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/userRegisterLog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/header/registerModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="116" column="42" lean-forward="true" selection-start-line="116" selection-start-column="42" selection-end-line="116" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducer/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducer/addCourse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/action/addInstructor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/index/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="17" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/courses/addToCart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="47" column="51" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/slidar/tab_Slider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="70" column="19" lean-forward="true" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/topic/topic_In_Media.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="94" column="45" selection-start-line="94" selection-start-column="45" selection-end-line="94" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/courses/ShoppingCart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="111" column="18" selection-start-line="83" selection-start-column="8" selection-end-line="111" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/courses/coursesSlider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2610">
-          <caret line="163" column="127" selection-start-line="163" selection-start-column="120" selection-end-line="163" selection-end-column="127" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/CourseInDetail.js" />
-    <entry file="file://$PROJECT_DIR$/src/container/courses/Course.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="25" column="95" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="95" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/customRoute/customRoute.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/courses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="43" column="22" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/App/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306">
-          <folding>
-            <element signature="e#0#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducer/instructor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/action/instructorDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/courses/CourseInDetail.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/courses/CourseInDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="141" column="138" lean-forward="true" selection-start-line="141" selection-start-column="32" selection-end-line="141" selection-end-column="138" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/adminDashbord.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/addCourse.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/tab_Slider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="88" column="15" selection-start-line="88" selection-start-column="15" selection-end-line="88" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/instructorCourses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/adminNavbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="56" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/Coursesmapped.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/header/header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="100" column="28" lean-forward="true" selection-start-line="100" selection-start-column="28" selection-end-line="100" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/addInstructor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/addCourseVideo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/AddCourses.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/admin/addCourse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6534">
-          <caret line="363" column="19" selection-start-line="293" selection-start-column="12" selection-end-line="363" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

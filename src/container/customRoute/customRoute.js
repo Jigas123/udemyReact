@@ -22,13 +22,12 @@ class CustomRoute extends Component{
         let redirectTo = undefined;
 
         if(!isUserLoggedIn && cprivate){
-            debugger;
             redirectTo = '/';
         }
         else if(isUserLoggedIn && cprivate && crole && crole.filter((chkrole) => chkrole === role).length === 0){
+
             redirectTo = '/';
         }
-        console.log("this log: ",rest.path+" .. ",component);
         return(
             <Route {...rest} render = {props => (
                 (redirectTo)? <Redirect to={{pathname:redirectTo, state:{from:props.location}}}/>

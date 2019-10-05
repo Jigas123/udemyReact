@@ -58,3 +58,11 @@
     position: fixed;
     bottom: 0;
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .footer-content {
+        min-width: auto;
+        width: 100%;
+    }
+}
+

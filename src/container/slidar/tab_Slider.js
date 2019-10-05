@@ -18,7 +18,6 @@ class TabSlider extends Component {
         if(key != this.state.key){
             this.setState({key});
         }
-        console.log("set state........",this.state.key);
     }
 
     getAllcategory(){
@@ -32,14 +31,11 @@ class TabSlider extends Component {
                 let subcategoryFilter = category.subcategory.filter((subcategory) => {
                     return subcategory.subcategory.length > 0;
                 })
-                console.log("category length: ", subcategoryFilter);
                 if (subcategoryFilter.length > 0) {
                     categoryFilter.push(category.name);
                     let ctgryTopic = [];
                     subcategoryFilter.map(function (subtopic, index) {
-                        console.log("my topic Array............", subtopic);
                         subtopic.subcategory.map(function (topic, index) {
-                            console.log("my topic............", topic.name);
                             ctgryTopic.push(topic.name);
                         })
                     });
@@ -47,13 +43,12 @@ class TabSlider extends Component {
                 }
             });
             if(that.state.key == null){
-                that.setState({key:categoryFilter[0]})
+                that.setState({key:categoryFilter[2]})
             }
 
             categoryFilter.map(function (category, index) {
-                categoryTab.push(<Tab key={category} eventKey={category} title={category}>{category}</Tab>);
+                categoryTab.push(<Tab key={index+""+category} eventKey={category} title={category}>{category}</Tab>);
             });
-
             return categoryTab;
         }
         catch (e) {
@@ -63,12 +58,12 @@ class TabSlider extends Component {
 
     render () {
         return(
-            <div>
+            <div key={"DisplayAtTabDiv"} className="tab-data">
                 <Tabs activeKey={this.state.key} onSelect={this.handleSelect}
                       id="controlled-tab-example">
                     {this.getAllcategory()}
                 </Tabs>
-                <Display topic={this.state.key}/>
+                <Display key={"DisplayAtTab"} topic={this.state.key}/>
             </div>
         );
     }

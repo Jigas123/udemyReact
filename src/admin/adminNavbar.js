@@ -46,9 +46,6 @@ class AdminavBar extends Component {
                             <NavItem>
                                 <NavLink onClick={this.addCourseAction}>Add Course</NavLink>
                             </NavItem>
-                            <NavItem>
-                                <NavLink onClick={this.addInstructorAction}>Add Instructor</NavLink>
-                            </NavItem>
                         </Nav>
                     </Collapse>
                 </Navbar>

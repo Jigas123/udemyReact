@@ -3,13 +3,14 @@ import {bindActionCreators} from 'redux';
 import {createBrowserHistory} from 'history';
 import {withRouter} from 'react-router-dom';
 import * as userLog from '../../action/userRegisterLog';
+import * as addCartItem from '../../action/userCartItem';
+import * as addToCartAction from '../../action/addUserCartData';
 import {connect} from 'react-redux';
 import Facebook from './facebook';
 
 import {Alert, Button,
     Form, FormGroup,
-    Input, Label,
-    Modal, ModalBody,
+    Input, Modal, ModalBody,
     ModalFooter, ModalHeader,
     NavLink} from "reactstrap";
 
@@ -29,6 +30,7 @@ class Login extends Component{
     }
 
     async logindata(event){
+        let uniqueArray = [];
         event.preventDefault();
         if(this.handleValidation()){
             const answer = await (this.props.action.userdetail.getUserLogin(this.state.eml,this.state.pswd));
@@ -36,17 +38,67 @@ class Login extends Component{
                 this.setState({error_flag:true})
             }
             else{
-                this.props.toggle();
-                this.setState({error_flag:false});
+                console.log(answer);
+                let cartflag = 1;
+                console.log(this.props.userRegisterLog.userDetail);
+                    if(this.props.userRegisterLog.userDetail !== null && this.props.userRegisterLog.userDetail.role === '0'){
+                        let newCartData;
+                        let localCartData = JSON.parse(localStorage.getItem("addToCart"));
+                            if(this.props.userRegisterLog.userDetail.cartData &&
+                                this.props.userRegisterLog.userDetail.cartData.length > 0){
+                                let userCartData = this.props.userRegisterLog.userDetail.cartData;
+                                if(localCartData && localCartData.length > 0) {
+                                    localCartData.map(function (cartItem, index) {
+                                        userCartData.map(function (cart, index) {
+                                            if (cart.course_Name === cartItem.course_Name){
+                                                cartflag = 0;
+                                            }
+                                            return 0;
+                                        })
+                                        if (cartflag === 1){
+                                            uniqueArray.push(cartItem);
+                                        }
+                                        cartflag = 1;
+                                        return 0;
+                                    })
+                                    newCartData = [...this.props.userRegisterLog.userDetail.cartData, ...uniqueArray];
+                                }
+                                else {
+                                    newCartData = userCartData.slice(0);
+                                }
+                            }
+                            else {
+                                if(localCartData) {
+                                    newCartData = localCartData.slice(0);
+                                }
+                            }
+                            if((this.props.userRegisterLog.userDetail.cartData &&
+                                this.props.userRegisterLog.userDetail.cartData.length > 0) || (localCartData && localCartData.length > 0)){
+                                let u_id = this.props.userRegisterLog.userDetail._id;
+                                let cartData = newCartData;
+                                let passDataObject = {u_id,cartData};
+                                let resp = await (this.props.action.addToCartDataAction.addCartData(passDataObject));
+                                if(resp){
+                                    localStorage.setItem("addToCart",JSON.stringify(cartData));
+                                    localStorage.removeItem("saveForCart");
+                                    this.props.action.addCartItem.getCartItem(cartData);
+                                    uniqueArray = [];
+                                    cartData = null;
+                                }
+                            }
+                    }
+                    else if(this.props.userRegisterLog.userDetail.role === '1'){
+                        this.props.action.addCartItem.getCartItem(null);
+                        localStorage.removeItem('addToCart');
+                        this.props.history.push({pathname:'/adminpenal/'});
+                    }
                 this.setState({
                     eml:null,
                     pswd:null,
                     errors : {},
                     error_flag:false
                 });
-                if(this.props.userRegisterLog.userDetail.role == '1'){
-                    this.props.history.push({pathname:'/adminpenal/'});
-                }
+                this.props.toggle();
             }
         }
     }
@@ -125,15 +177,18 @@ class Login extends Component{
 }
 
 const mapStateToProps = (state) => {
-    const {userRegisterLog} = state;
+    const {userRegisterLog,userCartItem} = state;
     return {
-        userRegisterLog: userRegisterLog
+        userRegisterLog: userRegisterLog,
+        userCartItem: userCartItem
     }
 };
 
 const mapDispatchToProps = dispatch => ({
     action: {
-        userdetail: bindActionCreators(userLog, dispatch)
+        userdetail: bindActionCreators(userLog, dispatch),
+        addToCartDataAction: bindActionCreators(addToCartAction,dispatch),
+        addCartItem:bindActionCreators(addCartItem,dispatch)
     }
 });
 

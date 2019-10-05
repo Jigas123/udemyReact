@@ -1,15 +1,10 @@
-.header-custom {
-    /*display: flex;*/
-    /*justify-content: space-between;*/
-    /*background: inherit;*/
-    /*box-sizing: border-box;*/
-    /*padding-top: 10px;*/
-    /*padding-bottom: 10px;*/
-    /*max-width: 1440px;*/
-    /*margin: auto;*/
-}
+
 .header-custom .nav-item{
     padding: 0 15px;
+}
+
+.tooltip-color {
+    background-color: white;
 }
 
 .header-cat {
@@ -74,6 +69,9 @@
     right: 0;
     height: 100%;
     z-index: 99;
+    background-color: #fff;
+    border: 1px solid #808080;
+    border-left: none;
 }
 
 .input-wrap {
@@ -125,6 +123,13 @@
     border-radius: 50%;
     background: red;
     color: white;
+}
+
+li {
+    list-style-type: none;
+}
+.linkFont {
+    color: blue;
 }
 
 

@@ -32,9 +32,7 @@ class Cards extends Component {
         let CardIndex = 0;
         const that = this;
         let topic = this.props.topic;
-        console.log("render on slider courses: ",this.props.courses);
         this.props.courses.AllCourses.map(function (course,index){
-            console.log(index+": "+course.category_Name);
             if(topic === course.category_Name){
                 that.CardData[CardIndex] = course;
                 CardIndex++;
@@ -45,7 +43,6 @@ class Cards extends Component {
     render() {
         this.addInArray();
         const cardData = this.CardData;
-        console.log("MET DATA: ",cardData);
         return (
             <section>
                 {

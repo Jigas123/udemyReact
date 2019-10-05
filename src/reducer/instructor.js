@@ -8,7 +8,6 @@ export const ERROR_IN_FETCHED_Instructor = "ERROR_IN_FETCHED_Instructor";
 export default (state = INITIAL_STATE,action) => {
     switch (action.type){
         case Instructor_FETCHED_SUCCESSFUL:{
-            debugger;
             return Object.assign({},state,{...state,AllInstructor:action.data});
         }
         case ERROR_IN_FETCHED_Instructor:{

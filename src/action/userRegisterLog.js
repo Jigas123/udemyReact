@@ -19,7 +19,7 @@ export const getUserRegister = (pssParams) => dispatch => {
                 type:ERROR_WHILE_USER_REGISTER,
                 data: {error_msg: error.response? error.response.data.message : "there is an error while calling API"}
             });
-            return false
+            return false;
         }
     })
 }
@@ -50,6 +50,8 @@ export const getUserLogout = () => dispatch => {
                 dispatch({
                     type:USER_LOGOUT_SUCCESSFULLY
                 });
+                localStorage.removeItem("addToCart");
+                localStorage.removeItem("saveForCart");
                 localStorage.removeItem("LoginUser");
 }
 

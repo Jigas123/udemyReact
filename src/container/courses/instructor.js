@@ -24,23 +24,22 @@ class Cards extends Component {
 
                     breakWordLength = card.profession.indexOf(instructorSplit[i])+instructorSplit[i].length;
                     if(breakWordLength > 25){
-                        console.log("strt stop index..........",breakWordLength+"........"+instructorSplit[i]);
                         strtStopIndex =  card.profession.indexOf(instructorSplit[i]);
                         break;
                     }
                 };
                 return (card.profession.substring(0, (strtStopIndex-1))+ "<br>" + card.profession.substring(strtStopIndex,card.profession.length));
-                console.log("ins...............",instructorSplit+"..............."+instructorSplit.length);
+
             };
             instructorArray.push(<>
                                     <div className="InstructorCard mt-3 mb-3" id="card" style={this.props.cardStyle} key={card._id}>
-                                        {console.log("bbbbbbbbbbbbbbbbbbbbbb",card)}
+
                                         <div>
                                             <div className="card-wrap">
-                                                <img className="card-img" src={card.own_Img} width="135" height="135" alt="Avatar"/>
-                                                <p className="name">{card.name}</p>
-                                                <div className="profession wrep">{card.profession}</div>
-                                                <p className="courses">{card.courses}</p>
+                                                <img className="card-img" src={card.own_Img} alt="Avatar"/>
+                                                <p className="name"><b>{card.name}</b></p>
+                                                <div className="profession wrep"><b>Profession: </b>{card.profession}</div>
+                                                <p className="courses"><b>{"Number of Course: "}</b>{card.courses}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -77,16 +76,22 @@ class InstructorSlider extends Component {
     }
 
     componentDidMount() {
-        let boxWidth = document.getElementById("card").clientWidth;
+        let boxWidth;
+        try {
+            boxWidth = 220;
+        }
+        catch (e) {
+            boxWidth = 0;
+        }
         this.setState({ width: boxWidth });
-        let nextClickCount = this.CardDataLength - 4;
+        let nextClickCount = this.CardDataLength - 5;
         this.setState({
             nextClickCount:nextClickCount
         });
     }
     // func: click the slider buttons
     handleClick(type) {
-        const cardLimit = 4;
+        const cardLimit = 5;
         // get the card's margin-right
         let margin = window.getComputedStyle(document.getElementById("card")).marginRight;
         margin = JSON.parse(margin.replace(/px/i, ''));
@@ -122,7 +127,6 @@ class InstructorSlider extends Component {
     addInstructor = () => {
         let allInstructor = [];
         allInstructor = this.props.instructor.AllInstructor.slice(0);
-        console.log("all instructor...",allInstructor);
         return allInstructor;
     }
 

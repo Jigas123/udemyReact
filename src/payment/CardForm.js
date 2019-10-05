@@ -37,7 +37,6 @@ function App(props) {
                         onApprove: async (data, actions) => {
                             const order = await actions.order.capture();
                             setPaidFor(true);
-                            console.log(order);
                         }
 
                     })

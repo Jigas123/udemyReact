@@ -57,7 +57,7 @@ class Disp extends Component {
 
                 }
             });
-
+            console.log(AllTopic);
             this.props.courses.AllCourses.map(function (course,index){
                 AllTopic.map(function (topic,index) {
                     if(topic === course.category_Name){
@@ -71,8 +71,6 @@ class Disp extends Component {
         catch (e) {
             console.log("there is an error :",e);
         }
-
-
     };
 
     componentDidMount() {
@@ -96,7 +94,6 @@ class Disp extends Component {
             let boxWidth;
             try {
                 boxWidth = document.getElementById("card").clientWidth;
-                console.log("boxboxboxboxboxboxboxboxboxbox",boxWidth);
             }
             catch (e) {
                 boxWidth = 0;
@@ -154,14 +151,14 @@ class Disp extends Component {
         this.addInArray();
         const cardData = this.CardData;
         return (
-            this.CardData ?
+            this.CardData && this.CardData.length > 0 ?
                 (
-                    <div className="cards-slider">
+                    <div key={"cardDataDivKey"} className="cards-slider">
                         <div className="slider-btns">
                             <button className="slider-btn btn-l" onClick={() => this.handleClick('prev')}>&lt;</button>
                             <button className="slider-btn btn-r" onClick={() => this.handleClick('next')}>&gt;</button>
                         </div>
-                        <Cards getboxWidth = {this.getboxWidth}  cardStyle={this.state.cardStyle} cardData = {cardData} courses = {this.props.courses} topic = {this.props.topic} categorydetail = {this.props.categorydetail}/>
+                        <Cards key={"coursesSliders"} getboxWidth = {this.getboxWidth}  cardStyle={this.state.cardStyle} cardData = {cardData} courses = {this.props.courses} topic = {this.props.topic} categorydetail = {this.props.categorydetail}/>
                     </div>
                 )
                 :<h3>Data is not available</h3>

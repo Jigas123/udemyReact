@@ -80,14 +80,12 @@ class AddInstructor extends Component {
             let pssParams;
             event.preventDefault();
             if(this.handleValidation()){
-                console.log("data are successfully validate");
                 let name = this.state.name;
                 let profession = this.state.profession;
                 let selfDescription = this.state.selfDesc;
                 let courses = 0;
                 pssParams = {name,profession,selfDescription,courses};
                 const answer = await (this.props.action.addinstructor.addInstructor(pssParams));
-                console.log('asdsa : ', answer);
                 if(!answer){
                     this.setState({error_flag:true})
                 }

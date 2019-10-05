@@ -10,6 +10,7 @@ import Login from "../header/loginModel";
 import Register from "../header/registerModel";
 import {Player} from "video-react";
 import AdminavBar from '../../admin/adminNavbar';
+import Pointicon from '../../Asset/download.png';
 
 const history = createBrowserHistory();
 
@@ -63,7 +64,6 @@ class CourseInDetail extends Component {
     }
 
     addToCart() {
-        console.log("selected data: ");
         this.setState(prevState => ({
             modal: !prevState.modal,
             popoverOpen: false
@@ -96,7 +96,6 @@ class CourseInDetail extends Component {
 
     render() {
         const that = this;
-        console.log("history passed: ", this.props);
         let courseData = this.props.location.state;
         let divideforLoop = courseData.learn.length / 2;
         let divideinLoop = Math.round(divideforLoop);
@@ -112,10 +111,10 @@ class CourseInDetail extends Component {
 
         for (let i = 0; i < divideinLoop; i++) {
             learnDataArranged.push(
-                <div className="row">
+                <div className="row" key={i}>
                     <div className="col-md-5">{courseData.learn[learnCount]}</div>
                     {courseData.learn[learnCount + 1] !== null ?
-                        <div className="col-md-5">{courseData.learn[learnCount + 1]}</div>
+                        <><div className="col-md-5">{courseData.learn[learnCount + 1]}</div></>
                         : null
                     }
                 </div>
@@ -124,11 +123,11 @@ class CourseInDetail extends Component {
         }
 
         courseData.course_content.map(function (courseContent, index) {
-            courseContentStore.push(<div className="coursecontent-wrap" onClick={() => that.toggle(index)}>
+            courseContentStore.push(<div key={index} className="coursecontent-wrap p-2" onClick={() => that.toggle(index)}>
                     {courseContent.content_Name}</div>,
-                <Collapse isOpen={index == that.state.id ? that.state.collapse : false}>
+                <Collapse key={"collaps"+index} isOpen={index == that.state.id ? that.state.collapse : false}>
                     {courseContent.sub_Content.map(function (contentData, index) {
-                        return (<div className="course-title">{contentData}</div>)
+                        return (<div key={index} className="course-title p-2">{contentData}</div>)
                     })
                     }
                 </Collapse>
@@ -136,10 +135,10 @@ class CourseInDetail extends Component {
         });
 
         courseData.requirement.map(function (requirement, index) {
-            requirementStore.push(<li>{requirement}</li>)
+            requirementStore.push(<li key={index}>{requirement}</li>)
         });
 
-        const isAdminLoggedIn = this.props.userRegisterLog.userDetail !== null ? this.props.userRegisterLog.userDetail.role == '1' : false
+        const isAdminLoggedIn = this.props.userRegisterLog.userDetail !== null ? this.props.userRegisterLog.userDetail.role === '1' : false;
 
         return (
             <div>
@@ -148,15 +147,9 @@ class CourseInDetail extends Component {
                     <div className="carousel-fullscreen-sidebar">
                         <div className="streamer__content">
                             <h3>{courseData.course_Name}</h3>
-                            <p>
-                                {courseData.course_Subtitle}
-                            </p>
-                            <div>
-                                {"Created by " + courseData.created_By.join()}
-                            </div>
-                            <div>
-                                {"Language : " + courseData.language}
-                            </div>
+                            <p>{courseData.course_Subtitle}</p>
+                            <p className="m-0">{"Created by " + courseData.created_By.join()}</p>
+                            <p className="m-0">{"Language : " + courseData.language}</p>
                         </div>
                     </div>
                 </div>
@@ -165,7 +158,7 @@ class CourseInDetail extends Component {
                         <div className="col-md-8">
                             <div className="learnbox-wrap container">
                                 <div className="learnBox">
-                                    <div><h5>What you'll learn</h5></div>
+                                    <h5>What you'll learn</h5>
                                     {learnDataArranged}
                                 </div>
 
@@ -187,29 +180,37 @@ class CourseInDetail extends Component {
                             </div>
                         </div>
 
-                            <div className="col-md-4">
-                                {console.log("course image.....",courseData.course_Img)}
+                            <div className="col-md-4 player-margin">
                                 <Player playsInline src={courseData.course_Img}/>
                                 <div>Total:</div>
                                 <div><h2>{discount}</h2></div>
-                                <p><strike>{price}</strike></p>
-                                {isAdminLoggedIn ? null : (
-                                    this.cartflag == 1 ?
-                                    (<Button className="checkoutbtn" outline color="secondary"
-                                            onClick={(e) => this.goToCart(e)}>Go to cart</Button>)
+                                {discount === price ? null
                                     :
-                                    (<Button className="checkoutbtn btn-primary" onClick={this.addToCart}>Add to
-                                        cart</Button>)
-
-                                ,<Button className="checkoutbtn" outline color="secondary" onClick={() => this.buyProduct([{
-                                    "course_Name": courseData.course_Name,
-                                    "course_Img": courseData.course_Img,
-                                    "created_By": courseData.created_By.join(),
-                                    "price": price,
-                                    "discount": discount,
-                                    "category_Name": courseData.category_Name
-                                }])}>Buy now</Button>
-                                    )}
+                                    <p><strike>{price}</strike></p>
+                                }
+                                {
+                                    !isAdminLoggedIn && (
+                                        this.cartflag === 1
+                                            ? <Button className="render-btn" outline color="secondary" onClick={(e) => this.goToCart(e)}>Go to cart</Button>
+                                            : <Button className="render-btn" outline color="danger" onClick={this.addToCart}>Add to
+                                                cart</Button>
+                                        )
+                                }
+                                <br/>
+                                {
+                                    !isAdminLoggedIn && (
+                                        <div className="buy-now-btn">
+                                        <Button className="render-btn" outline color="secondary" onClick={() => this.buyProduct([{
+                                            "course_Name": courseData.course_Name,
+                                            "course_Img": courseData.course_Img,
+                                            "created_By": courseData.created_By.join(),
+                                            "price": price,
+                                            "discount": discount,
+                                            "category_Name": courseData.category_Name
+                                        }])}>Buy now</Button>
+                                        </div>
+                                    )
+                                }
                             </div>
 
                     </div>

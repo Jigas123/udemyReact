@@ -21,19 +21,16 @@ class Filter extends Component {
     }
 
     OnChangeCheckbox = (event) => {
-        console.log("thats checked event: ",event.target.checked+" "+event.target.value+" "+event.target.name);
         if(event.target.checked){
-            console.log("property add: ",this.props.action.filterTopicAction.addfilteredTopic(event.target.name,event.target.value));
+            this.props.action.filterTopicAction.addfilteredTopic(event.target.name,event.target.value);
             // this.props.filterTopicAction.addfilteredTopic(event.target.name,event.target.value);
         }
         else {
-            console.log("property delete: ",this.props.action.filterTopicAction.removefilteredTopic(event.target.name,event.target.value));
+            this.props.action.filterTopicAction.removefilteredTopic(event.target.name,event.target.value);
         }
 
     };
     getChecked = (courseType,courseName) => {
-
-        console.log("sddsadsaddsdrhreah ",courseType+" "+courseName);
         if(localStorage.getItem(courseType) !== null) {
             if (JSON.parse(localStorage.getItem(courseType)).includes(courseName))
                 return true
@@ -49,7 +46,6 @@ class Filter extends Component {
 
         this.props.categorydetail.Allcategory.map(function (categories, index) {
             categories.subcategory.map(function (subcategories, index) {
-                    // console.log("matches category.......",subcategories.subcategory);
                 let matchsubcategoryArray = categories.subcategory.slice(0);
                 if(subcategories.name === topic){
                     matchedSubArray = matchsubcategoryArray;
@@ -85,7 +81,6 @@ class Filter extends Component {
                 }
             });
         });
-        console.log("there is no any data: ",matchedTopicArray);
         const uniqueLanguage = [...new Set(this.props.courses.AllCourses.map(course => course.language))];
         return (
             <div className="ios-add">
@@ -106,8 +101,8 @@ class Filter extends Component {
                                 </tr>
                                 <tr className="hide_all">
                                     <th>Topic</th>
-                                    <th>Subcategory</th>
-                                    <th>Language</th>
+                                    {/*<th>Subcategory</th>*/}
+                                    {/*<th>Language</th>*/}
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -118,26 +113,19 @@ class Filter extends Component {
                                         try {
                                             maxarrayLength = Math.max(matchedTopicArray.length, matchedSubArray.length);
                                             for (let i = 0; i < maxarrayLength; i++) {
-                                                newArray.push(<tr className="hide_all">
+                                                newArray.push(<tr key={i} className="hide_all">
                                                     {matchedTopicArray[i] ?
-                                                        <td><input type="checkbox" name="topic"
+                                                        <td><input type="checkbox" name="topic" key={i}
                                                                    onClick={this.OnChangeCheckbox}
                                                                    value={matchedTopicArray[i].name}
                                                                    defaultChecked={this.getChecked("topic", matchedTopicArray[i].name)}/>{matchedTopicArray[i].name}
                                                         </td>
                                                         : <td></td>}
-                                                    {matchedSubArray[i] ?
-                                                        <td><input type="checkbox" name="subcategory"
-                                                                   onClick={this.OnChangeCheckbox}
-                                                                   value={matchedSubArray[i].name}
-                                                                   defaultChecked={this.getChecked("subcategory", matchedSubArray[i].name)}/>{matchedSubArray[i].name}
-                                                        </td>
+                                                    {matchedSubArray[i] ? null
+
                                                         : <td></td>}
                                                     {uniqueLanguage[i] ?
-                                                        <td><input type="checkbox" name="language"
-                                                                   defaultChecked={this.getChecked()}
-                                                                   value={uniqueLanguage[i]}/>{uniqueLanguage[i]}
-                                                        </td>
+                                                        null
                                                         : <td></td>}
                                                 </tr>);
                                             }

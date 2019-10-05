@@ -6,17 +6,25 @@
 
 }
 
+.buy-now-btn {
+    padding-top: 5px;
+}
+
+.render-btn {
+    width: 70%;
+}
+
 .carousel-fullscreen-sidebar {
     display: flex;
     align-items: center;
     height: 100%;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
 .streamer__content{
     color: #ffffff;
-    width: 65%;
+    width: 100%;
 }
 .streamer__content h3{
     color: #ffffff;
@@ -27,7 +35,7 @@
 
 .streamer__content p{
     font-size: 18px;
-    line-height: 34px;
+    line-height: 1.5;
     margin-bottom: 5px;
 }
 
@@ -53,6 +61,12 @@
 
 .course-requirement{
     padding-top: 20px;
+}
+.course-requirement ul li{
+    list-style: circle;
+}
+.player-margin {
+    margin-top: 20px;
 }
 
 @media (max-width: 480px) {

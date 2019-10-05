@@ -10,7 +10,7 @@ class MediaTopic extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            sortedBy : null
+            sortedBy : "0"
         }
     }
     myfun = () => {
@@ -21,9 +21,7 @@ class MediaTopic extends Component{
         let selectedTopic = [];
         let topics;
         topics = JSON.parse(localStorage.getItem("topic"));
-        console.log("get reducer: ",this.props.filterTopic);
         if(topics !== null && topics.length>0){
-            console.log("page load");
 
             topics.map(function (topic) {
                 let filtredmarge;
@@ -34,7 +32,6 @@ class MediaTopic extends Component{
                         let offer = parseInt(courses.offer);
                         let discount = parseInt(price - ((price * offer) / 100));
                         if(that.state.sortedBy === "lowestPrice"){
-                            console.log("there is an error::   ",that.state.sortedBy);
                             if(discount<500){
                                 return courses;
                             }
@@ -53,37 +50,37 @@ class MediaTopic extends Component{
                     coursesFiltered.push(filtredelement);
                 });
             });
-            console.log("my log...................",coursesFiltered);
         }
         else {
-            if(localStorage.getItem("selectedTopic") !== null) {
+            if(localStorage.getItem("selectedTopic") !== null && localStorage.getItem("selectedTopic").length > 0 ) {
                 selectedTopic =  JSON.parse(localStorage.getItem("selectedTopic"));
-            }
-            console.log("selected topic...",selectedTopic);
-            selectedTopic.map(function (stopic,index){
-                that.props.courses.AllCourses.map(courses => {
-                    if(courses.category_Name === stopic){
-                        let price = parseInt(courses.price);
-                        let offer = parseInt(courses.offer);
-                        let discount = parseInt(price - ((price * offer) / 100));
-                        if(that.state.sortedBy === "lowestPrice"){
-                            console.log("there is an error::   ",that.state.sortedBy);
-                            if(discount<500){
-                                coursesFiltered.push(courses);
-                            }
-                        }
-                        else if(that.state.sortedBy === "highestPrice"){
-                            if(discount>500){
-                                coursesFiltered.push(courses);
-                            }
-                        }
-                        else {
-                            coursesFiltered.push(courses);
-                        }
-                    }
 
+            }
+            if(selectedTopic.length > 0){
+                selectedTopic.map(function (stopic,index){
+                    that.props.courses.AllCourses.map(courses => {
+                        if(courses.category_Name === stopic){
+                            let price = parseInt(courses.price);
+                            let offer = parseInt(courses.offer);
+                            let discount = parseInt(price - ((price * offer) / 100));
+                            if(that.state.sortedBy === "lowestPrice"){
+                                if(discount<500){
+                                    coursesFiltered.push(courses);
+                                }
+                            }
+                            else if(that.state.sortedBy === "highestPrice"){
+                                if(discount>500){
+                                coursesFiltered.push(courses);
+                                }
+                            }
+                            else {
+                                coursesFiltered.push(courses);
+                            }
+                        }
+
+                    });
                 });
-            });
+            }
         }
 
         filtredData = coursesFiltered.map(function (course,index){
@@ -131,8 +128,8 @@ class MediaTopic extends Component{
                     <tbody>
                 <tr className="hide_all">
                     <td>
-                <select id="select" onChange = {this.setsortedState.bind(this)}>
-                    <option value="0">Sort</option>
+                <select id="select" defaultValue={0} onChange = {this.setsortedState.bind(this)}>
+                    <option value={0}>Sort</option>
                     <option value="lowestPrice">Lowest Price</option>
                     <option value="highestPrice">Highest Price</option>
                 </select>

@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import './Checkout.css';
 import {Media} from "reactstrap";
+import poster from '../../Asset/slider.png';
 import App from '../../payment/CardForm';
 
 class Checkoutpag extends Component {
@@ -28,7 +29,7 @@ class Checkoutpag extends Component {
                 that.cartDataMap.push(
                     <Media className="checkout-wrap" key={index}>
                         <Media left>
-                            <Media object src={Cart.course_Img} height="35px" width="35px"/>
+                            <Media object src={poster} height="35px" width="35px"/>
                         </Media>
                         <Media body>
                             <Media heading>

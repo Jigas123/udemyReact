@@ -8,7 +8,7 @@ class Footer extends Component {
             borderBottom:'5px solid red',
         }
         return (
-
+            <div className="footer-content">
             <footer className="w-100 ant-page-header-footer " style={divStyle}>
                 <hr/>
                 <Container>
@@ -50,6 +50,7 @@ class Footer extends Component {
                     </div>
                 </Container>
             </footer>
+            </div>
         );
     }
 }

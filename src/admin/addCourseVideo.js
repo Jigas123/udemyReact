@@ -2,6 +2,8 @@ import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as addCourseVideoAction from '../action/addCourseVideo';
+import * as coursesdetailAction from '../action/coursedetail';
+import * as instructorDetailAction from '../action/instructorDetail';
 import { Button, Form, FormGroup, Label, Input, Alert} from 'reactstrap';
 import AdminavBar from './adminNavbar';
 
@@ -21,7 +23,6 @@ class AddcourseVideo extends Component{
             selectedFile: event.target.files[0],
             loaded: 0,
         })
-        console.log(event.target.files[0])
     }
 
     video_submit = async (e) => {
@@ -37,6 +38,8 @@ class AddcourseVideo extends Component{
         data.append('courseImage', this.state.selectedFile);
         let APIresponse = await (this.props.action.addCourseVideoAction.addcourseVideo(data));
         if(APIresponse){
+            await (this.props.action.coursesdetail.getAllCourses());
+            await (this.props.action.instructorDetail.getAllInstructor());
             this.setState({Alert:1});
         }
     }
@@ -72,7 +75,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => ({
     action: {
-        addCourseVideoAction : bindActionCreators(addCourseVideoAction,dispatch)
+        addCourseVideoAction : bindActionCreators(addCourseVideoAction,dispatch),
+        coursesdetail : bindActionCreators(coursesdetailAction,dispatch),
+        instructorDetail : bindActionCreators(instructorDetailAction,dispatch)
     }
 });
 

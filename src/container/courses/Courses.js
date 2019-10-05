@@ -18,19 +18,17 @@ class Courses extends Component {
         let path = getCategoryArray[0];
         path = path.toLowerCase();
         path = path.replace(" ", "-");
-        console.log("change path: ", getCategoryArray[1], " topic name: ", getCategoryArray[0]);
 
         this.props.history.push({pathname: '/' + getCategoryArray[1] + '/', state: getCategoryArray[0]});
     };
 
     subcategories = (subcategory) => {
-        console.log("subcategories.....", subcategory);
         let scategory = [];
         scategory = subcategory.filter(function (subcategory) {
             return subcategory.name.slice(0, 3) !== "All"
         });
-        scategory = scategory.map((category) => {
-            return (<div className="navbar-item">
+        scategory = scategory.map((category,index) => {
+            return (<div key={index} className="navbar-item">
                 <NavItem>
                     <NavLink onClick={(event) => this.clickHandle(event, [category.name, "courses"])}
                              key={category.name}>{category.name}</NavLink>
@@ -44,8 +42,6 @@ class Courses extends Component {
 
         const that = this;
         let subCategoryarray;
-        // let appendArray;
-        // let appendSubArray;
 
         this.props.categorydetail.Allcategory.map(async function (category) {
             if (category.name === that.props.location.state) {
@@ -56,17 +52,14 @@ class Courses extends Component {
             } else {
                 await category.subcategory.map(function (subCategories) {
                     if (subCategories.name === that.props.location.state) {
-                        // return category;
                         subCategoryarray = null;
                         subCategoryarray = category;
                         subCategories.subcategory.length ? that.matchCategory = true : that.matchCategory = false
-
                     }
                 });
             }
 
         });
-        // console.log("this got by array......",subCategoryarray.subcategory);
         return (
             <Nav className="navbar-wrap">
                 <NavItem>
@@ -82,7 +75,7 @@ class Courses extends Component {
     render() {
         const getcategory = this.getCategory();
         const h1Style = {
-            'margin-top': '0px'
+            'marginTop': '0px'
         };
         return (
 

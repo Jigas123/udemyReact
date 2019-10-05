@@ -2,6 +2,7 @@ import '../../../node_modules/video-react/dist/video-react.css';
 import '../card-slider/cardSlider.css';
 import React,{Component} from 'react';
 import { Button, Popover, PopoverHeader, PopoverBody,NavLink } from 'reactstrap';
+import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
 import {createBrowserHistory} from 'history';
 import AddToCart from './addToCart';
@@ -22,7 +23,6 @@ class Cards extends Component {
     }
 
     onCourseClick = (cart) =>{
-        console.log("course content",cart._id);
         this.props.history.push({pathname:'/course-detail/',state:cart,search:"?id="+cart._id})
     }
 
@@ -77,46 +77,61 @@ class Cards extends Component {
                                     if (index < 4)
                                         return (<li>{learnPoint}</li>);
                                 });
-                                if(localStorage.getItem('addToCart') !== null){
+                                if(this.props.userRegisterLog.userDetail !== null && this.props.userRegisterLog.userDetail.role == 0){
+                                    if(this.props.userRegisterLog.userDetail.cartData.length > 0){
+                                        this.props.userRegisterLog.userDetail.cartData.map(function (cartData,index) {
+                                            if(cartData.course_Name == card.course_Name){
+                                                cartflag = 1;
+                                            }
+                                        });
+                                    }
+
+                                }
+                                else if(localStorage.getItem('addToCart') !== null){
                                     let cartDataStorage = JSON.parse(localStorage.getItem('addToCart'));
 
                                     cartDataStorage.map(function (cartData,index){
                                         if(cartData.course_Name == card.course_Name){
-
                                             cartflag = 1;
                                         }
                                     })
                                 }
                                 return (
                                     <>
-                                        <div className="card" id="card" style={this.props.cardStyle} key={courseName()}
+                                        <div className="card" id="card" style={this.props.cardStyle} key={i}
                                              onMouseOver={() => this.onHover('Popover-' + i)} onClick={this.onCourseClick.bind(this,card)}>
-                                            <div id={'Popover-' + i}>
-                                                <div className="card-wrap">
-                                                    <Player playsInline poster={poster}
-                                                        src={card.course_Img} />
+                                            <div id={'Popover-' + i} key={i+"Card"}>
+                                                <div className="card-wrap" key={i+"CardUnder"}>
+                                                    <img src={poster} />
                                                     <p className="title">{courseName()}</p>
                                                     <p className="desc">{card.created_By.join()}</p>
-                                                    <p className="desc"><strike>{price}</strike></p>
-                                                    <p className="desc">{discount}</p>
+                                                    {discount === price ? null
+                                                        :
+                                                        <p className="desc">{"Price: "}<strike>{price}</strike></p>
+                                                    }
+                                                    <p className="desc">{"discounted Price: "}{discount}</p>
                                                 </div>
                                             </div>
                                         </div>
 
                                         {('Popover-' + i) === this.state.id ?
-                                            (<><Popover placement="left" id={i}
+                                            (<><Popover placement="left" id={i} key={i+"Popover"}
                                                         isOpen={this.state.popoverOpen} target={'Popover-' + i}>
-                                                    <PopoverHeader>
+                                                    <PopoverHeader className="fix-header" key={i+"header"}>
                                                         {card.course_Name}</PopoverHeader>
-                                                    <PopoverBody><p>{"in" + card.category_Name}</p><p>{card.course_Subtitle}</p>
+                                                    <PopoverBody className="fix-body" key={i+"Body"}><p>{"in" + card.category_Name}</p><p>{card.course_Subtitle}</p>
                                                         <p>{learnPoint}</p>
-                                                        {cartflag == 1 ?<a href="http://localhost:3001/cart/"><Button outline color="secondary">Go to cart</Button></a>
-                                                            : <Button className="btn-primary" onClick={this.addToCart.bind(this)}>Add to cart</Button>}
+                                                        { cartflag == 1 ?
+                                                                    <a href="http://localhost:3000/cart/">
+                                                                        <Button key={i+"goto"} id="btn-position" outline color="secondary" >Go to cart</Button></a>
+                                                                    : <Button key={i+"addToCart"} id="btn-position" className="btn-primary" onClick={this.addToCart}>Add to cart</Button>
+                                                        }
+
                                                     </PopoverBody>
 
                                                 </Popover>
-                                                    <AddToCart isOpen={this.state.modal}  toggle={this.addToCart} className={this.props.className}
-                                                               onlinkclick = {this.onLink.bind(this)} data = {this.state.modal ? {"course_Name":card.course_Name,"course_Img":card.course_Img,"created_By":card.created_By.join(),
+                                                    <AddToCart key={"AddToCart"+i} isOpen={this.state.modal}  toggle={this.addToCart} className={this.props.className}
+                                                               onlinkclick = {this.onLink.bind(this)} data = {this.state.modal ? {"course_Name":card.course_Name,"course_Img":poster,"created_By":card.created_By.join(),
                                                         "price":price,"discount":discount,"category_Name":card.category_Name}: null} />
                                                 </>
                                             )
@@ -139,4 +154,11 @@ class Cards extends Component {
     }
 }
 
-export default withRouter(Cards);
+const mapStateToProps = (state) => {
+    const {userRegisterLog} = state;
+    return {
+        userRegisterLog : userRegisterLog
+    }
+};
+
+export default withRouter(connect(mapStateToProps,null)(Cards));

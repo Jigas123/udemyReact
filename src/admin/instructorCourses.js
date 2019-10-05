@@ -11,7 +11,6 @@ class InstructorCourses extends Component{
         if(this.props.instructor.AllInstructor.length >0){
             this.instructorArray = this.props.instructor.AllInstructor;
             this.instructorArray.map(function (instructor,index) {
-                console.log("instructor...",instructor._id+" "+instructor.name);
                 this.instructorMapped.push({"name":instructor.name,"value":instructor.name,"_id":instructor._id});
             })
     }

@@ -2,22 +2,23 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as userLog from '../../action/userRegisterLog';
+import * as addCartItem from '../../action/userCartItem';
 import {withRouter} from 'react-router-dom';
 import {createBrowserHistory} from 'history';
+import AdminRegister from './AdminRegister';
 import Register from './registerModel';
 import Login from './loginModel';
+import './autoComplete.css';
 
 import 'antd/dist/antd.css';
 import {
     Collapse,
     DropdownToggle,
     Navbar,
-    NavbarToggler,
     NavbarBrand,
     Nav,
     NavItem,
     NavLink,
-    Alert,
     UncontrolledDropdown,
     InputGroup,
     InputGroupAddon,
@@ -31,7 +32,7 @@ import {
     FormGroup,
     Label,
     FormText,
-    PopoverHeader,
+    PopoverHeader,Tooltip,
     PopoverBody,UncontrolledPopover,DropdownMenu,DropdownItem
 } from 'reactstrap';
 import '@fortawesome/free-solid-svg-icons';
@@ -52,13 +53,168 @@ class Header extends Component {
             isOpen: false,
             modal: false,
             Loginmodal: false,
+            adminRegisterModal: false,
             error: null,
             popoveronbtn1:false,
-            popoveronbtn2:false
+            popoveronbtn2:false,
+            cartCount:null,
+            tooltipOpen: false,
+            tooltipOpenTech: false,
+            searchValue:null,
+            searchOption:[]
         };
         this.handleGenreSelect = this.handleGenreSelect.bind(this);
         this.registrPopup = this.registrPopup.bind(this);
         this.LoginPopup = this.LoginPopup.bind(this);
+        this.openAdminRegister = this.openAdminRegister.bind(this);
+        this.toggle = this.toggle.bind(this);
+        // this.searchContent = this.searchContent.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.onLinkAdmin = this.onLinkAdmin.bind(this);
+        this.onLink = this.onLink.bind(this);
+        // this.mapSearchable = this.mapSearchable.bind(this);
+    }
+
+    handleChange = (e,searchValue) => {
+                const that = this;
+                let searchArray = [];
+                let inputValue = e.target.value;
+                let categories = this.props.categorydetail.Allcategory;
+
+                if(inputValue !== ""){
+                    this.searchCategory = (categories) => {
+                        categories.map(function (element,key) {
+                         if(element.subcategory && element.subcategory.length){
+                                if(((element.name.toLowerCase()).indexOf(inputValue.toLowerCase()))>-1){
+
+                                    searchArray.push(element.name);
+                                }
+                                {that.searchCategory(element.subcategory)}
+                            }
+                            else{
+                                if(((element.name.toLowerCase()).indexOf(inputValue.toLowerCase()))>-1){
+                                    searchArray.push(element.name);
+                                }
+                            }
+                            return 0;
+                    });
+
+                    }
+                    this.searchCategory(categories);
+
+                    this.props.courses.AllCourses.map(function (course,index) {
+                        if(course.course_Name.toLowerCase().search(inputValue.toLowerCase()) !== -1){
+                            searchArray.push(course.course_Name);
+                        }
+                    });
+                }
+
+                // window.sessionStorage.setItem("searchValue",inputValue);
+                this.setState({searchValue : inputValue,searchOption:searchArray.slice(0)})
+
+    }
+
+    onLogoClick = () => {
+        this.props.history.push({pathname:'/'});
+    }
+
+    setSelectedValue = (elementName) => {
+
+        if(this.state.searchValue !== elementName){
+            // window.sessionStorage.setItem("searchValue",elementName);
+            this.setState({searchValue : elementName,searchOption:[]})
+        }
+    }
+
+    // componentDidMount(){
+    //     let searchValue = window.sessionStorage.getItem("searchValue");
+    //     if(this.state.searchValue !== searchValue){
+    //         this.setState({
+    //             searchValue : searchValue
+    //         }, () => {
+    //             if(searchValue !== null){
+    //                 // this.searchContent();
+    //             }
+    //         });
+    //     }
+    // }
+
+    openCart = () => {
+        this.props.history.push({pathname:'/cart/'});
+    }
+
+    searchContent = () => {
+        let searchableCourse = [];
+        let searchFlag = 0;
+        const that = this;
+
+        let categories = this.props.categorydetail.Allcategory;
+        if(this.state.searchValue){
+            this.searchCategory = (categories) => {
+                categories.map(function (element,key) {
+                    if(element.subcategory && element.subcategory.length){
+                        if(element.name.toLowerCase() === that.state.searchValue.toLowerCase()){
+                            searchFlag = 1;
+                            debugger;
+                            that.props.history.push({pathname:'/courses/',state:element.name});
+                        }
+                        {that.searchCategory(element.subcategory)}
+                    }
+                    else{
+                        if(element.name.toString().toLowerCase() === that.state.searchValue.toString().toLowerCase()){
+                            searchFlag = 1;
+                            debugger;
+                            that.props.history.push({pathname:'/topic/',state:element.name});
+                        }
+                    }
+                    return 0;
+                });
+            }
+            this.searchCategory(categories);
+            searchableCourse = [];
+            if(!searchFlag){
+                    this.props.courses.AllCourses.map(function (course,index) {
+                        if(course.course_Name.toLowerCase().search(that.state.searchValue.toLowerCase()) !== -1){
+                            searchFlag = 1;
+                            searchableCourse.push(course);
+                        }
+                    });
+            }
+            if(!searchFlag){
+                this.props.courses.AllCourses.map(function (course,index) {
+                    if(course.created_By[0].toString().toLowerCase().search(that.state.searchValue.toString().toLowerCase()) !== -1){
+                        searchFlag = 1;
+                        searchableCourse.push(course);
+                    }
+                });
+            }
+            if(searchableCourse.length > 0){
+                debugger;
+                this.props.history.push({pathname:'/searchableData/',state:searchableCourse});
+            }
+        }
+        else {
+            this.props.history.push({pathname:'/'});
+        }
+        debugger;
+        this.setState({searchValue:null,searchOption:[]});
+    }
+
+    toggle = (tooltip) => {
+        this.setState({
+            [tooltip]: !this.state[tooltip]
+        });
+    }
+
+    openAdminRegister = () => {
+        if(!this.state.adminRegisterModal){
+            this.setState(prevState => ({
+                tooltipOpen: !prevState.tooltipOpen
+            }))
+        }
+        this.setState(prevState => ({
+            adminRegisterModal: !prevState.adminRegisterModal
+        }));
     }
 
     onEnter = (event) => {
@@ -89,10 +245,17 @@ class Header extends Component {
     onLink(){
         this.registrPopup(); this.LoginPopup();
     }
+    onLinkAdmin(){
+        this.openAdminRegister(); this.LoginPopup();
+    }
 
-    logoutUser = (e) => {
+    logoutUser = async (e) => {
         e.preventDefault();
-        this.props.action.userdetail.getUserLogout();
+        if(this.state.searchValue !== '' || this.state.searchValue !== null){
+            this.setState({searchValue:null})
+        }
+        await (this.props.action.addCartItemAction.getCartItem(null));
+        await (this.props.action.userdetail.getUserLogout());
         this.props.history.push({pathname: '/'})
     }
 
@@ -113,9 +276,10 @@ class Header extends Component {
     };
 
     appendNotification = () => {
-        let data = [];
-        if(this.props.userCartItem.cartItem !== null && this.props.userCartItem.cartItem.length > 0){
-            return this.props.userCartItem.cartItem.length;
+        if(this.props.userCartItem.cartItem !== null){
+            let cartData = this.props.userCartItem.cartItem.length;
+            if(cartData)
+                return cartData;
         }
         return null;
     }
@@ -140,14 +304,18 @@ class Header extends Component {
     };
 
     render() {
+        this.appendNotification();
+        if(this.props.userRegisterLog.userDetail !== null){
+            console.log(this.props.userRegisterLog.userDetail.role);
+
+        }
         const menu = (<Menu>
                         {this.appendcategory(this.props.categorydetail.Allcategory)}
                     </Menu>);
         return (
                 <div className="header-custom">
-
                         <Navbar color="light" light expand="md" className='w-100 navbar-main-wrap'>
-                            <NavbarBrand href="/"><img src={logo} width="110" height="32"/></NavbarBrand>
+                            <NavbarBrand onClick={this.onLogoClick.bind(this)}><img src={logo} width="110" height="32"/></NavbarBrand>
                             <Collapse isOpen={this.state.isOpen} navbar>
                                 <Nav navbar className='align-items-center w-100'>
                                     <UncontrolledDropdown nav inNavbar>
@@ -158,10 +326,23 @@ class Header extends Component {
                                             </Dropdown>
                                     </UncontrolledDropdown>
                                     <NavItem className='navitem-width'>
-                                        <InputGroup className="d-flex input-wrap">
-                                            <Input />
-                                            <InputGroupAddon addonType="append">
-                                                <Button color="white" href="#"><i className="fa fa-search"/></Button>
+                                        <InputGroup className="d-flex input-wrap" id="wrapedInput">
+                                            <div className="AutoCompleteText">
+                                            <Input className="searchBar" type="text" id="searchInput" onChange = {(event) => this.handleChange(event,'searchValue')}
+                                            value = {this.state.searchValue || ''}/>
+
+                                            {this.state.searchOption.length > 0 ?
+                                                (<ul className="searchableList">
+                                                    {
+                                                        this.state.searchOption.map((elementName, index) =>
+                                                            <li key={index} onClick={() => this.setSelectedValue(elementName)}>{elementName}</li>)
+                                                    }
+                                                </ul>)
+                                                : null
+                                            }
+                                            </div>
+                                            <InputGroupAddon addonType="append" id="searchContent">
+                                                <Button color="white" onClick={(event) => this.searchContent(event)}><i className="fa fa-search"/></Button>
                                             </InputGroupAddon>
                                         </InputGroup>
                                     </NavItem>
@@ -177,11 +358,15 @@ class Header extends Component {
                                             Teach on Udemy
                                         </Button></NavLink>
                                     </NavItem>
-                                    <NavItem>
-                                        <a href="http://localhost:3001/cart/" className="notification"><img className="icon " alt="1" src={cartImg}/>
-                                        <span className="badge">{this.appendNotification()}</span>
-                                        </a>
-                                    </NavItem>
+                                    {this.props.userRegisterLog.userDetail !== null && this.props.userRegisterLog.userDetail.role == '1' ? null
+                                        :
+                                        (<NavItem>
+                                            <a onClick={this.openCart.bind(this)} className="notification"><img
+                                                className="icon " alt="1" src={cartImg}/>
+                                                <span className="badge">{this.appendNotification()}</span>
+                                            </a>
+                                        </NavItem>)
+                                    }
                                     {this.props.userRegisterLog.userDetail == null ?(
                                         <>
                                         <NavItem>
@@ -194,7 +379,6 @@ class Header extends Component {
                                         </NavItem>
                                         </>
                                         ):
-                                        <>
                                         <NavItem>
                                             <UncontrolledDropdown nav inNavbar>
                                                 <DropdownToggle>
@@ -212,46 +396,52 @@ class Header extends Component {
                                                 </DropdownMenu>
                                             </UncontrolledDropdown>
                                         </NavItem>
-                                        </>
                                     }
 
                                 </Nav>
                             </Collapse>
                         </Navbar>
+                        <AdminRegister isOpen = {this.state.adminRegisterModal} toggle={this.openAdminRegister} className={this.props.className}
+                                       onlinkclick = {this.onLinkAdmin} />
                         <Register isOpen = {this.state.modal} toggle={this.registrPopup} className={this.props.className}
-                            onlinkclick = {this.onLink.bind(this)} />
+                            onlinkclick = {this.onLink} />
 
                         <Login isOpen={this.state.Loginmodal} toggle={this.LoginPopup} className={this.props.className}
-                               onlinkclick = {this.onLink.bind(this)} />
-                    <UncontrolledPopover trigger="legacy" placement="bottom" target="PopoverLegacy">
-                        <PopoverBody><span>Turn what you know into an opportunity<br />
-                                                and reach millions around the world.</span>
-                            <a tag={Link} href="https://www.udemy.com/teaching/?ref=teach_header">Learn more</a>
-                        </PopoverBody>
-                    </UncontrolledPopover>
-                    <UncontrolledPopover trigger="click" placement="bottom" target="PopoverClick">
-                        <PopoverBody><span>Get your team access to 3,500+ top<br />
-                                            Udemy courses anytime, anywhere</span>
-                            <a tag={Link} href="https://business.udemy.com/request-demo/?locale=en_US&ref=ufb_header">Try Udemy for Business</a>
-                        </PopoverBody>
-                    </UncontrolledPopover>
+                               onlinkclick = {this.onLink} />
+                    <Tooltip className="tooltip-color" placement="top" isOpen={this.state.tooltipOpen} autohide={false} target="PopoverClick" toggle={this.toggle.bind(this,"tooltipOpen")}>
+                        <span>Get your team access to 3,500+ top<br/>
+                            Udemy courses anytime, anywhere</span>
+                        {this.props.userRegisterLog.userDetail === null ?
+                            (<a onClick={this.openAdminRegister}><div className="linkFont">Try Udemy for Business</div></a>)
+                        : null
+                        }
+
+                    </Tooltip>
+                    <Tooltip placement="top" isOpen={this.state.tooltipOpenTech} autohide={false} target="PopoverLegacy" toggle={this.toggle.bind(this,"tooltipOpenTech")}>
+                        <span>Turn what you know into an opportunity<br />
+                            and reach millions around the world.</span>
+                        <a className="linkFont" onClick={()=> window.open("https://www.udemy.com/teaching/?ref=teach_header", "_blank")}><div className="linkFont">Learn more</div></a>
+                    </Tooltip>
                 </div>
         );
+
     }
 }
 
 const mapStateToProps = (state) => {
-    const {categorydetail,userRegisterLog,userCartItem} = state;
+    const {categorydetail,userRegisterLog,userCartItem,courses} = state;
     return {
         categorydetail: categorydetail,
         userRegisterLog: userRegisterLog,
-        userCartItem: userCartItem
+        userCartItem: userCartItem,
+        courses : courses
     }
 };
 
 const mapDispatchToProps = dispatch => ({
     action: {
-        userdetail: bindActionCreators(userLog, dispatch)
+        userdetail: bindActionCreators(userLog, dispatch),
+        addCartItemAction : bindActionCreators(addCartItem, dispatch)
     }
 });
 

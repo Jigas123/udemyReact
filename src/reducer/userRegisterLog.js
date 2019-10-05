@@ -9,6 +9,8 @@ export const ERROR_WHILE_USER_REGISTER = "ERROR_WHILE_USER_REGISTER";
 export const ERROR_WHILE_USER_LOGIN = "ERROR_WHILE_USER_LOGIN";
 export const USER_LOGOUT_SUCCESSFULLY = "USER_LOGOUT_SUCCESSFULLY";
 export const ERROR_WHILE_USER_LOGOUT = "ERROR_WHILE_USER_LOGOUT";
+export const USER_CART_ADDED_SUCCESSFULLY = "USER_CART_ADDED_SUCCESSFULLY";
+export const THERE_IS_AN_ERROR_TO_ADD_CART = 'THERE_IS_AN_ERROR_TO_ADD_CART';
 
 export default (state = INITIAL_STATE,action) => {
     switch(action.type){
@@ -26,6 +28,12 @@ export default (state = INITIAL_STATE,action) => {
         }
         case USER_LOGOUT_SUCCESSFULLY:{
             return Object.assign({},state,{...state,userDetail:null});
+        }
+        case USER_CART_ADDED_SUCCESSFULLY:{
+            return Object.assign({},state,{...state,userDetail: { ...state.userDetail, cartData:action.data }});
+        }
+        case THERE_IS_AN_ERROR_TO_ADD_CART:{
+            return Object.assign({},state,{error_msg:action.data.error_msg});
         }
         default:
             return state;

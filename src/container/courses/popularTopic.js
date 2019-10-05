@@ -11,12 +11,9 @@ class Cards extends Component {
     }
     addInArray = () => {
         let topicArray = [];
-        let CardIndex = 0;
         const that = this;
         this.CardData = [...this.props.allTopic];
-        console.log("tttttttttttttttttt",this.CardData.length)
         for (let i=0;i<this.CardData.length;i=i+2){
-            console.log("tttttttttttttttttt",this.CardData[i])
             topicArray.push(
                 <div className="TopicCard shadow-none" id="card" style={that.props.cardStyle} key={i}>
                     {/*<a href="#"><img src={card.course_Img} /></a>*/}
@@ -70,7 +67,6 @@ class Ptopic extends Component {
     }
     // func: click the slider buttons
     handleClick(type) {
-        const cardLimit = 5;
         // get the card's margin-right
         let margin = window.getComputedStyle(document.getElementById("card")).marginRight;
         margin = JSON.parse(margin.replace(/px/i, ''));
@@ -110,12 +106,14 @@ class Ptopic extends Component {
                 category.subcategory.map(function (category,index) {
                     if(category.subcategory.length > 0){
                         category.subcategory.map(function (subctgryname,index) {
-                            // console.log("yyyyyyyyyyyyyyyyyyyyyyyyy",subctgryname.name);
                             allTopic.push(subctgryname.name);
+                            return 0;
                         })
 
                     }
+                    return 0;
                 })
+                return 0;
             })
             return allTopic;
         }
@@ -135,7 +133,6 @@ class Ptopic extends Component {
         }
         let topic = [];
         topic = this.addTopic();
-        console.log("////////////////",typeof topic);
         return (
             this.CardData ?
                 (

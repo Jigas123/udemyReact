@@ -26,9 +26,7 @@ class Disp extends Component {
         let tempArray = [];
         let selectedTopic = [];
         const that = this;
-        console.log("chk state before set: ",this.state.topic);
 
-        console.log("chk state after set: ",this.props.topic);
         this.props.categorydetail.Allcategory.map(function (category,index) {
                 tempArray = [];
                 category.subcategory.map(function (subcategory,index) {
@@ -42,10 +40,12 @@ class Disp extends Component {
 
                     if(subcategory.name === that.props.topic){
                         AllTopic = tempArray.slice(0);
-                        console.log("mattttttch",tempArray);
+                        if(AllTopic.length <= 0){
+                            localStorage.removeItem("selectedTopic");
+
+                        }
                     }
                     else if(subcategory.subcategory !== [] && subcategory.subcategory.length > 0){
-                        console.log("ctgry.........",subcategory)
                         tempArray = subcategory.subcategory;
                         subcategory.subcategory.map(function (subTopic,index){
 
@@ -56,7 +56,6 @@ class Disp extends Component {
                                     }
                                     else {
                                         AllTopic.push(subTopic.name);
-
                                     }
                                 }
                         })
@@ -78,6 +77,7 @@ class Disp extends Component {
                      });
                  }
                  else{
+                     console.log(topic);
                      selectedTopic.push(topic)
                      localStorage.setItem("selectedTopic", JSON.stringify(selectedTopic))
                      that.props.courses.AllCourses.map(function (course, index) {
@@ -100,7 +100,6 @@ class Disp extends Component {
     };
 
     componentDidMount() {
-        console.log("component did mount..");
         this.CardDataLength = this.CardData.length;
         let nextClickCount = this.CardDataLength - 5;
         let boxWidth;
@@ -116,7 +115,6 @@ class Disp extends Component {
     }
 
     componentDidUpdate(){
-        console.log("component did update..");
         if(this.props.topic !== this.state.topic) {
             let boxWidth;
             try {
@@ -181,17 +179,18 @@ class Disp extends Component {
         this.addInArray();
         let cardData = this.CardData;
         return (
-            this.CardData ?
+            this.CardData && this.CardData.length > 0 ?
                 (
                     <div className="cards-slider">
                         <div className="slider-btns">
                             <button className="slider-btn btn-l" onClick={() => this.handleClick('prev')}>&lt;</button>
                             <button className="slider-btn btn-r" onClick={() => this.handleClick('next')}>&gt;</button>
                         </div>
-                            <Cards cardStyle={this.state.cardStyle} cardData = {cardData} courses = {this.props.courses} topic = {this.props.topic} categorydetail = {this.props.categorydetail}/>
+                            <Cards key={"cardContent"} cardStyle={this.state.cardStyle} cardData = {cardData} courses = {this.props.courses} topic = {this.props.topic} categorydetail = {this.props.categorydetail}/>
                     </div>
                 )
-                :<h3>Data is not available</h3>
+                :
+                <h3>Data is not available</h3>
         );
     }
 }

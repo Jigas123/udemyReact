@@ -26,8 +26,7 @@
     box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
 }
 .card p{
-    word-break: break-all;
-    white-space: normal;
+    font-weight: bold;
 }
 
 .card .title {
@@ -40,11 +39,6 @@
     word-wrap: break-word;
     white-space: -moz-pre-wrap;
     white-space: pre-wrap;
-}
-.card img {
-    display: block;
-    position: relative;
-    width: 80%;
 }
 .slider-btn {
     padding: 0;
@@ -83,6 +77,10 @@
     color: #e06665;
 }
 .card-img {
+    vertical-align:central;
+    margin-left: 43px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
 }
 .wrep {
@@ -90,3 +88,4 @@
     white-space: normal;
     word-wrap: break-word;
 }
+

@@ -65,14 +65,14 @@ class Courses extends Component{
         this.CardData = [];
         this.addInArray();
         return(
-            this.CardData ? (
+            this.CardData.length > 0 ? (
                 <div>
                     {this.props.instructor !=null ? (<div>{'instructor : '+this.props.instructor}</div>) : (<div>{this.props.topic+' courses'}</div>)}
 
                     <CoursesMapped cardData = {this.CardData}/>
                 </div>
                 ):(
-                <div>There is no any data available</div>
+                <div>There is no any Course inserted by  <b>{this.props.instructor}</b></div>
             )
         );
     }

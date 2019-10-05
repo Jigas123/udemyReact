@@ -5,6 +5,7 @@ import {createBrowserHistory} from 'history';
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import * as userCartItem from '../../action/userCartItem';
+import * as addToCartAction from '../../action/addUserCartData';
 import './ShoppingCart.css';
 import Login from "../header/loginModel";
 import Register from "../header/registerModel";
@@ -18,22 +19,32 @@ class ShoppingCart extends Component {
             removeItm:null,
             saveItem:null,
             moveItem:null,
+            oneTimeAddDataFlag:null,
             modal: false,
             Loginmodal: false
         }
         this.LoginPopup = this.LoginPopup.bind(this);
     }
 
-    deleteCourse = (courseName,CartLink) => {
+    deleteCourse = async (courseName,CartLink) => {
         let filtred;
         let deleteCart;
-        if(CartLink == "addToCart"){
+        if(CartLink === "addToCart"){
             deleteCart = JSON.parse(localStorage.getItem('addToCart'));
             filtred = deleteCart.filter(function(cart,index){
                 return cart.course_Name !== courseName;
             });
             localStorage.setItem("addToCart",JSON.stringify(filtred));
+            if(this.props.userRegisterLog.userDetail !== null){
+                let u_id = this.props.userRegisterLog.userDetail._id;
+                let cartData = filtred;
+                let passObjectData = {u_id,cartData}
+                await(this.props.action.addToCartAction.addCartData(passObjectData));
+                let userDetail = this.props.userRegisterLog.userDetail;
+                localStorage.setItem("LoginUser",JSON.stringify(userDetail));
+            }
             this.props.action.userCartItem.getCartItem(filtred)
+
         }
         else{
             deleteCart = JSON.parse(localStorage.getItem('saveForCart'));
@@ -60,7 +71,7 @@ class ShoppingCart extends Component {
         this.setState({saveItem:saveDataObject.course_Name});
     }
 
-    moveToCart = (moveDataObject) => {
+    moveToCart = async(moveDataObject) => {
         let getCartData = [];
         let filtred;
 
@@ -76,6 +87,12 @@ class ShoppingCart extends Component {
         getCartData.push(moveDataObject);
         localStorage.setItem('addToCart',JSON.stringify(getCartData));
         this.props.action.userCartItem.getCartItem(getCartData)
+        if(this.props.userRegisterLog.userDetail !== null) {
+            let u_id = this.props.userRegisterLog.userDetail._id;
+            let cartData = getCartData;
+            let passObjectData = {u_id, cartData}
+            await (this.props.action.addToCartAction.addCartData(passObjectData));
+        }
         this.setState({moveItem:moveDataObject.course_Name});
     }
 
@@ -94,7 +111,7 @@ class ShoppingCart extends Component {
                         </div>
                         <div className='d-flex flex-column remove-text'>
                             <p><a onClick={that.removeCourse.bind(this,cartData.course_Name,CartLink)}>{"Remove"}</a></p>
-                            {CartLink == 'addToCart' ?
+                            {CartLink === 'addToCart' ?
                                 <p><a onClick={that.saveLaterCourse.bind(this, cartData,CartLink)}>Save for Later</a></p>
                                 : <p><a onClick={that.moveToCart.bind(this, cartData)}>Move to Cart</a></p>
                             }
@@ -144,13 +161,22 @@ class ShoppingCart extends Component {
         const that = this;
         let cartDataMap = [];
         let saveCartMap = [];
-        let saveForlater = [];
         let saveCart = null;
         let cartData = null;
         let totalPrice = 0;
         let totalDiscount = 0;
-        if (localStorage.getItem('addToCart') !== null) {
-            let cartDataStorage = JSON.parse(localStorage.getItem('addToCart'));
+        // if(this.props.userRegisterLog.userDetail !== null &&
+        //     this.props.userRegisterLog.userDetail.cartData.length > 0) {
+        //     if(localStorage.getItem('addToCart') == null){
+        //         let userCartData = this.props.userRegisterLog.userDetail.cartData;
+        //         localStorage.setItem("addToCart",JSON.stringify(userCartData));
+        //     }
+        //
+        // }
+        if(this.props.userCartItem.cartItem !== null){
+
+            //let cartDataStorage = JSON.parse(localStorage.getItem('addToCart'));
+            let cartDataStorage = this.props.userCartItem.cartItem;
             cartData = cartDataStorage.slice(0);
             cartData.map(function (cartData, index) {
                 totalPrice += cartData.price;
@@ -158,6 +184,7 @@ class ShoppingCart extends Component {
                 cartDataMap.push(
                     that.mapped(index,cartData,'addToCart')
                 );
+                return 0;
             });
         }
 
@@ -168,10 +195,10 @@ class ShoppingCart extends Component {
                 saveCartMap.push(
                     that.mapped(index,cartData,'saveForCart')
                 );
+                return 0;
             });
         }
 
-        console.log("gotted.......", cartDataMap);
         return (
             <>
                 <div className="header-Content">
@@ -225,15 +252,17 @@ class ShoppingCart extends Component {
 }
 
 const mapStateToProps = (state) => {
-    const {userRegisterLog} = state;
+    const {userRegisterLog,userCartItem} = state;
     return {
-        userRegisterLog: userRegisterLog
+        userRegisterLog: userRegisterLog,
+        userCartItem: userCartItem
     }
 };
 
 const mapDispatchToProps = dispatch => ({
     action: {
-        userCartItem: bindActionCreators(userCartItem, dispatch)
+        userCartItem: bindActionCreators(userCartItem, dispatch),
+        addToCartAction: bindActionCreators(addToCartAction, dispatch)
     }
 });
 

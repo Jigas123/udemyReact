@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React,{Component,Fragment} from 'react';
 import {BrowserRouter as Router,Route,Switch, withRouter} from 'react-router-dom';
 
 import {connect} from 'react-redux';
@@ -22,10 +22,9 @@ import AddcourseVideo from '../../admin/addCourseVideo';
 import Unauthorize from '../../anauthorize/anauthorize';
 import Adminpenal from '../../admin/adminDashbord'
 import AddInstructor from '../../admin/addInstructor';
+import SearchableData from '../header/searchableData';
 
 class App extends Component{
-
-
     componentDidMount() {
         this.props.action.categorydetail.getAllCategories();
         this.props.action.coursedetail.getAllCourses();
@@ -42,17 +41,22 @@ class App extends Component{
                 <div>
                     <Header/>
                     <Switch>
-                        <CustomRoute exact path="/" component={Index}/>
+                        <Fragment>
+                        <div id="page-container">
+                        <CustomRoute exact path="/" component={Index} />
                         <CustomRoute path="/topic/" component={Topic} />
                         <CustomRoute path="/courses/" component={Courses} />
-                        <CustomRoute exact path="/cart/" component={ShoppingCart}/>
-                        <CustomRoute exact path="/course-detail/" component = {CourseInDetail}/>
-                        <CustomRoute cprivate crole = {[user]} exact path="/cart/checkout/" component = {Checkoutpag}/>
+                        <CustomRoute exact path="/course-detail/" component = {CourseInDetail} />
+                        <CustomRoute exact path="/searchableData/" component = {SearchableData} />
+                        <CustomRoute exact path="/cart/" component={ShoppingCart} />
+                        <CustomRoute cprivate crole = {[user]} exact path="/cart/checkout/" component = {Checkoutpag} />
                         <CustomRoute cprivate crole = {[admin]} exact path='/adminpenal/' component = {Adminpenal} />
-                        <CustomRoute cprivate crole = {[admin]} exact path="/adminpenal/addcourse/" component = {AddCourse}/>
-                        <CustomRoute cprivate crole = {[admin]} exact path="/adminpenal/addcourse/addvideo/" component = {AddcourseVideo}/>
-                        <CustomRoute cprivate crole = {[admin]} exact path="/adminpenal/addinstructor/" component = {AddInstructor}/>
+                        <CustomRoute cprivate crole = {[admin]} exact path="/adminpenal/addcourse/" component = {AddCourse} />
+                        <CustomRoute cprivate crole = {[admin]} exact path="/adminpenal/addcourse/addvideo/" component = {AddcourseVideo} />
+                        <CustomRoute cprivate crole = {[admin]} exact path="/adminpenal/addinstructor/" component = {AddInstructor} />
                         <CustomRoute cprivate path='/unauthorize/' component = {Unauthorize} />
+                        </div>
+                        </Fragment>
                     </Switch>
                     <Footer/>
                 </div>
