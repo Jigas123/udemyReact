@@ -8,6 +8,7 @@ import userCartItem from './userCartItem';
 import subCategory from './subCategory';
 import addCourse from './addCourse';
 import addInstructor from './addInstructor';
+import selectedTopic from './selectedTopic';
 
 export default combineReducers({categorydetail,courses,filterTopic,instructor,userRegisterLog,userCartItem,subCategory
-,addCourse,addInstructor});
+,addCourse,addInstructor,selectedTopic});

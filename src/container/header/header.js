@@ -155,7 +155,6 @@ class Header extends Component {
                     if(element.subcategory && element.subcategory.length){
                         if(element.name.toLowerCase() === that.state.searchValue.toLowerCase()){
                             searchFlag = 1;
-                            debugger;
                             that.props.history.push({pathname:'/courses/',state:element.name});
                         }
                         {that.searchCategory(element.subcategory)}
@@ -163,7 +162,6 @@ class Header extends Component {
                     else{
                         if(element.name.toString().toLowerCase() === that.state.searchValue.toString().toLowerCase()){
                             searchFlag = 1;
-                            debugger;
                             that.props.history.push({pathname:'/topic/',state:element.name});
                         }
                     }
@@ -189,14 +187,12 @@ class Header extends Component {
                 });
             }
             if(searchableCourse.length > 0){
-                debugger;
                 this.props.history.push({pathname:'/searchableData/',state:searchableCourse});
             }
         }
         else {
             this.props.history.push({pathname:'/'});
         }
-        debugger;
         this.setState({searchValue:null,searchOption:[]});
     }
 

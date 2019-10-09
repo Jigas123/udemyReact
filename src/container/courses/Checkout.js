@@ -1,7 +1,8 @@
 import React,{Component} from 'react';
 import './Checkout.css';
-import {Media} from "reactstrap";
+import {Media,Button} from "reactstrap";
 import poster from '../../Asset/slider.png';
+import axios from 'axios/index';
 import App from '../../payment/CardForm';
 
 class Checkoutpag extends Component {
@@ -19,11 +20,25 @@ class Checkoutpag extends Component {
             return course_Name.substring(0, 24) + "..";
     };
 
+    sendPayment = (event,payment) => {
+        const data = {
+            amount: payment
+        };
+        axios.post( 'http://192.168.0.104:8000/payment/bid', data )
+            .then( res => {
+                console.log( 'resp', res.data );
+                window.location.href = res.data;
+
+            } )
+            .catch( ( error ) => console.log( error.response.data ) );
+    }
+
     getAllCheckoutData = () => {
         this.totalPrice = 0;
         this.cartDataMap = [];
         const that = this;
         let CardData = this.props.location.state;
+        localStorage.setItem('finalCartData',JSON.stringify(CardData));
         try {
             CardData.map(function (Cart, index) {
                 that.cartDataMap.push(
@@ -68,7 +83,8 @@ class Checkoutpag extends Component {
                     {this.cartDataMap}
                 </div>
                 <div>
-                    <App totalPrice = {this.totalPrice}/>
+                    <h5>{"Total amount: "+this.totalPrice}</h5>
+                    <Button onClick={(event) => this.sendPayment(event,this.totalPrice)}>Pay now</Button>
                 </div>
             </div>
         );

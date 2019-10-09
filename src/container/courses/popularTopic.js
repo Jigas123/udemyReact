@@ -27,6 +27,7 @@ class Cards extends Component {
     render() {
         return (
             <section>
+                <div><b>Popular Topic</b></div>
                 {
                     this.addInArray()
                 }

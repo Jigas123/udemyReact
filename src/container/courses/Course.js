@@ -50,6 +50,7 @@ class Cards extends Component {
     }
 
     render() {
+        debugger;
         let newCardObject;
         let lngth = this.props.cardData.length;
         let selectedData = {};

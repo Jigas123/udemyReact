@@ -1,21 +1,47 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import {Media} from 'reactstrap';
+import {createBrowserHistory} from 'history';
 import './topic_In_Media.css';
 import poster from '../../Asset/slider.png';
-import banner from '../../Asset/entry-default.jpg';
-import filterTopic from "../../reducer/filterTopic";
+import {withRouter} from 'react-router-dom';
+
+const history = createBrowserHistory();
 
 class MediaTopic extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            sortedBy : "0"
+            sortedBy : "sort",
+            topic : []
         }
     }
-    myfun = () => {
 
+    setsortedState = (event) => {
+        let setvalue = event.target.value;
+        this.setState({
+            sortedBy:setvalue
+        });
+    }
+
+    onCourseClick(event,fullCourse){
+        console.log(event);
+        this.props.history.push({pathname:'/course-detail/',state:fullCourse,search:"?id="+fullCourse._id});
+    }
+
+    componentWillReceiveProps = () => {
         const that = this;
+        let selectedTopicReceive = [];
+        selectedTopicReceive =  this.props.selectedTopic.AllSelectedTopic;
+        if(this.state.topic.length > 0 && this.state.topic[0] !== selectedTopicReceive[0]){
+
+            that.setState({topic : selectedTopicReceive,sortedBy : "sort"})
+        }
+    }
+
+    myfun = () => {
+        const that = this;
+        let topicData = [];
         let filtredData = [];
         let coursesFiltered = [];
         let selectedTopic = [];
@@ -52,9 +78,14 @@ class MediaTopic extends Component{
             });
         }
         else {
-            if(localStorage.getItem("selectedTopic") !== null && localStorage.getItem("selectedTopic").length > 0 ) {
-                selectedTopic =  JSON.parse(localStorage.getItem("selectedTopic"));
+            topicData = [];
+            topicData = this.props.selectedTopic.AllSelectedTopic;
+            if(topicData !== null && topicData.length > 0 ) {
+                selectedTopic =  this.props.selectedTopic.AllSelectedTopic;
+                if(this.state.topic.length == 0){
+                    this.setState({topic : selectedTopic,sortedBy : "sort"})
 
+                }
             }
             if(selectedTopic.length > 0){
                 selectedTopic.map(function (stopic,index){
@@ -70,10 +101,11 @@ class MediaTopic extends Component{
                             }
                             else if(that.state.sortedBy === "highestPrice"){
                                 if(discount>500){
-                                coursesFiltered.push(courses);
+                                    coursesFiltered.push(courses);
                                 }
                             }
-                            else {
+                            else if(that.state.sortedBy === "sort"){
+
                                 coursesFiltered.push(courses);
                             }
                         }
@@ -87,7 +119,8 @@ class MediaTopic extends Component{
             let price = parseInt(course.price);
             let offer = parseInt(course.offer);
             let discount = parseInt(price - ((price * offer) / 100));
-             return (<Media className="main-wrap" key = {index}>
+            return (<Media className="main-wrap" onClick={(event) => that.onCourseClick(event,course)}
+                           key = {index}>
                 <Media left>
                     <Media object src={poster} height = "200px" width = "200px"/>
                 </Media>
@@ -114,13 +147,6 @@ class MediaTopic extends Component{
         return filtredData;
     }
 
-    setsortedState = (event) => {
-        let setvalue = event.target.value;
-        this.setState({
-            sortedBy:setvalue
-        });
-    }
-
     render(){
         return(
             <div>
@@ -128,8 +154,8 @@ class MediaTopic extends Component{
                     <tbody>
                 <tr className="hide_all">
                     <td>
-                <select id="select" defaultValue={0} onChange = {this.setsortedState.bind(this)}>
-                    <option value={0}>Sort</option>
+                <select id="selected" value={this.state.sortedBy} onChange = {(event) => this.setsortedState(event)}>
+                    <option value="sort" selected={true}>Sort</option>
                     <option value="lowestPrice">Lowest Price</option>
                     <option value="highestPrice">Highest Price</option>
                 </select>
@@ -142,14 +168,17 @@ class MediaTopic extends Component{
             </div>
         )
     }
+
 }
+
 const mapStateToProps = (state) => {
-    const { categorydetail,courses,filterTopic}  = state;
+    const {categorydetail,courses,filterTopic,selectedTopic}  = state;
     return {
         categorydetail : categorydetail,
         courses : courses,
-        filterTopic : filterTopic
+        filterTopic : filterTopic,
+        selectedTopic : selectedTopic
     }
 };
 
-export default connect(mapStateToProps)(MediaTopic);
+export default withRouter(connect(mapStateToProps)(MediaTopic));

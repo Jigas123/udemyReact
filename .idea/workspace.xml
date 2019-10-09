@@ -2,104 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c99b5a08-896d-4912-a3f3-b8839967a61f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/container/courses/addToCart.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/header/AdminRegister.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/header/searchableData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/udemy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/udemy.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Allcss/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Allcss/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/addCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/addCourse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/addCourseVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/addCourseVideo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/addInstructor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/addInstructor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/categorydetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/categorydetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/coursedetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/coursedetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/filterTopic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/filterTopic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/instructorDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/instructorDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/subCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/subCategory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/userCartItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/userCartItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/userRegisterLog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/userRegisterLog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/admin/Coursesmapped.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/Coursesmapped.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/admin/addCourse.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/addCourse.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/admin/addCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/addCourse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/admin/addCourseVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/addCourseVideo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/admin/addInstructor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/addInstructor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/admin/adminDashbord.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/adminDashbord.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/admin/adminNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/adminNavbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/admin/courses.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/courses.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/admin/instructorCourses.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/instructorCourses.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/admin/tab_Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/tab_Slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anauthorize/anauthorize.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/anauthorize/anauthorize.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anauthorize/anauthorize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/anauthorize/anauthorize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/App/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/App/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/container/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/banner/topicBanner.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/banner/topicBanner.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/banner/topicBanner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/banner/topicBanner.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/container/card-slider/cardSlider.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/card-slider/cardSlider.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/container/card-slider/cardSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/card-slider/cardSlider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/courses/Checkout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/Checkout.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/container/courses/Checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/Checkout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/container/courses/Course.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/Course.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/courses/CourseInDetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/CourseInDetail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/courses/CourseInDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/CourseInDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/courses/Courses.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/Courses.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/courses/Courses.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/Courses.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/courses/ShoppingCart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/ShoppingCart.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/container/courses/ShoppingCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/ShoppingCart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/container/courses/addToCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/addToCart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/courses/coursesSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/coursesSlider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/courses/instructor.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/instructor.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/courses/instructor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/instructor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/courses/popularTopic.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/popularTopic.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/container/courses/popularTopic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/courses/popularTopic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/customRoute/customRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/customRoute/customRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/filter/filter.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/filter/filter.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/filter/filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/filter/filter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/footer/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/footer/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/footer/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/footer/footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/header/facebook.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/header/facebook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/header/header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/container/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/header/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/header/loginModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/header/loginModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/header/registerModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/header/registerModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/learnexample/popover.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/learnexample/popover.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/learnexample/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/learnexample/slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/learnexample/tab_example.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/learnexample/tab_example.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/slidar/slidar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/slidar/slidar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/slidar/slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/slidar/slider.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/slidar/subslider.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/slidar/subslider.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/slidar/subslider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/slidar/subslider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/slidar/tab_Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/slidar/tab_Slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/topic/Topic.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/topic/Topic.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/topic/Topic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/topic/Topic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/topic/topic_In_Media.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/topic/topic_In_Media.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/header/searchableData.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/header/searchableData.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/header/searchableData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/header/searchableData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/header/searchableMedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/header/searchableMedia.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/container/topic/topic_In_Media.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/topic/topic_In_Media.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/payment/CardForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/CardForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/payment/payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/payment/payment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/addCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/addCourse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/addInstructor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/addInstructor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/categorydetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/categorydetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/courses.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/courses.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/filterTopic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/filterTopic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/instructor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/instructor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/subCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/subCategory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/userCartItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/userCartItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/userRegisterLog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/userRegisterLog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/addCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/addCourse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/addCourseVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/addCourseVideo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/addInstructor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/addInstructor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/basicService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/basicService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/categorydetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/categorydetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/coursedetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/coursedetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/instructorDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/instructorDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/subCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/subCategory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/userRegisterLog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/userRegisterLog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +51,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../node js/udemy" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -244,7 +163,11 @@
       <workItem from="1570103488645" duration="11833000" />
       <workItem from="1570171166217" duration="28406000" />
       <workItem from="1570202328153" duration="14240000" />
-      <workItem from="1570261790800" duration="5628000" />
+      <workItem from="1570261790800" duration="21517000" />
+      <workItem from="1570427925217" duration="29993000" />
+      <workItem from="1570514561291" duration="3818000" />
+      <workItem from="1570518756401" duration="22436000" />
+      <workItem from="1570601937994" duration="11454000" />
     </task>
     <servers />
   </component>

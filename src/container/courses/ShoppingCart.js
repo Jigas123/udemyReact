@@ -165,17 +165,9 @@ class ShoppingCart extends Component {
         let cartData = null;
         let totalPrice = 0;
         let totalDiscount = 0;
-        // if(this.props.userRegisterLog.userDetail !== null &&
-        //     this.props.userRegisterLog.userDetail.cartData.length > 0) {
-        //     if(localStorage.getItem('addToCart') == null){
-        //         let userCartData = this.props.userRegisterLog.userDetail.cartData;
-        //         localStorage.setItem("addToCart",JSON.stringify(userCartData));
-        //     }
-        //
-        // }
+
         if(this.props.userCartItem.cartItem !== null){
 
-            //let cartDataStorage = JSON.parse(localStorage.getItem('addToCart'));
             let cartDataStorage = this.props.userCartItem.cartItem;
             cartData = cartDataStorage.slice(0);
             cartData.map(function (cartData, index) {

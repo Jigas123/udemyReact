@@ -2,6 +2,8 @@ import '../card-slider/cardSlider.css';
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import Cards from '../courses/Course';
+import {bindActionCreators} from 'redux';
+import * as SelectedTopic from '../../action/selectedTopic';
 
 class Disp extends Component {
     constructor(props) {
@@ -21,7 +23,7 @@ class Disp extends Component {
         };
     }
 
-    addInArray = () => {
+    addInArray = async() => {
         let AllTopic = [];
         let tempArray = [];
         let selectedTopic = [];
@@ -88,8 +90,8 @@ class Disp extends Component {
                      });
 
                  }
-
              })
+        this.props.action.SelectedTopic.getSelectedTopic(selectedTopic);
         if(this.props.topic !== this.state.topic){
             let nextClickCount = this.CardData.length - 5;
             this.setState({
@@ -203,4 +205,10 @@ const mapStateToProps = (state) => {
     }
 };
 
-export default connect(mapStateToProps)(Disp);
+const mapDispatchToProps = dispatch => ({
+    action :{
+        SelectedTopic : bindActionCreators(SelectedTopic,dispatch)
+    }
+})
+
+export default connect(mapStateToProps,mapDispatchToProps)(Disp);

@@ -25,7 +25,6 @@ class SearchableData extends Component{
             let discount = parseInt(price - ((price * offer) / 100));
             console.log(course);
             console.log(course._id);
-            debugger;
 
             if(that.state.sortedBy == "lowestPrice"){
                 if(discount < 500){

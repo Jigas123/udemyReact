@@ -23,6 +23,7 @@ import Unauthorize from '../../anauthorize/anauthorize';
 import Adminpenal from '../../admin/adminDashbord'
 import AddInstructor from '../../admin/addInstructor';
 import SearchableData from '../header/searchableData';
+import Paymentsuccess from '../courses/paymentSuccessfully';
 
 class App extends Component{
     componentDidMount() {
@@ -44,8 +45,9 @@ class App extends Component{
                         <Fragment>
                         <div id="page-container">
                         <CustomRoute exact path="/" component={Index} />
-                        <CustomRoute path="/topic/" component={Topic} />
-                        <CustomRoute path="/courses/" component={Courses} />
+                            <CustomRoute path="/courses/" component={Courses} />
+                            <CustomRoute path="/topic/" component={Topic} />
+                            <CustomRoute path="/successful-payment/" component = {Paymentsuccess} />
                         <CustomRoute exact path="/course-detail/" component = {CourseInDetail} />
                         <CustomRoute exact path="/searchableData/" component = {SearchableData} />
                         <CustomRoute exact path="/cart/" component={ShoppingCart} />

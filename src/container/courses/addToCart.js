@@ -24,22 +24,6 @@ class AddToCart extends Component{
         const that = this;
         let getCartData = [];
 
-        // if(this.props.userRegisterLog.userDetail !== null){
-        //     if(objectData.length >1){
-        //         this.props.userRegisterLog.userDetail.cartData.map(function (cartData,index) {
-        //             if(cartData.course_Name === objectData[1].course_Name){
-        //                 that.setState({storageflag:0});
-        //             }
-        //             return 0;
-        //         });
-        //     }
-        //     else {
-        //         that.setState({storageflag:0});
-        //     }
-        //     getCartData.push(objectData[1]);
-        //     return getCartData;
-        // }
-        // else {
             getCartData = JSON.parse(localStorage.getItem("addToCart"));
             getCartData.map(function (card,index){
                 if(objectData.length >1){
@@ -61,16 +45,7 @@ class AddToCart extends Component{
         let getCartData;
         if(Objectdata.length > 1){
             getCartData = this.chkData(Objectdata);
-            // if(this.props.userRegisterLog.userDetail !== null){
-            //     let u_id = this.props.userRegisterLog.userDetail;
-            //     let cartData = [...this.props.userRegisterLog.userDetail.cartData,...getCartData];
-            //     console.log(cartData);
-            //     let passDataObject = {u_id,cartData}
-            //     let apiResponse = await (this.props.action.addToCartDataAction.addCartData(passDataObject));
-            //     this.props.onlinkclick();
-            //     that.setState({storageflag:0});
-            // }
-            // else {
+
                 if(that.state.storageflag === 1){
                     getCartData.push(Objectdata[1]);
                     localStorage.setItem("addToCart",JSON.stringify(getCartData));

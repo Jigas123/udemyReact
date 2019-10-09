@@ -10,10 +10,10 @@
     /*box-shadow: 1px 1px 10px #D8D8D8;*/
 }
 .card {
-    float: left !important;
     text-align: left;
-    background: #fff;
+    float: left !important;
     width: 222px;
+    background: #fff;
     position: relative;
     display: inline-block;
     left: 0;

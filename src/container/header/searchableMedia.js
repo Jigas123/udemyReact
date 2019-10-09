@@ -14,14 +14,13 @@ class SearchableMedia extends Component{
 
     onCourseClick(event,fullCourse){
         console.log(event);
-        debugger;
         this.props.history.push({pathname:'/course-detail/',state:fullCourse,search:"?id="+fullCourse._id});
     }
 
     render(){
         return(
             <Media className="searchable-wrap container"
-                   fullCourse = {this.props.fullcourseInfo} key = {this.props.key}
+                   fullcourse = {this.props.fullcourseInfo} key = {this.props.key}
                    onClick={(event) => this.onCourseClick(event,this.props.fullcourseInfo)}>
                 <Media left>
                     <Media object src={poster} height = "100px" width = "100px"/>
@@ -39,7 +38,7 @@ class SearchableMedia extends Component{
                         </div>
                     </Media>
                     <div className="subtitle-content">
-                    {this.props.fullcourseInfo.course_Subtitle+" | created by "+this.props.fullcourseInfo.created_By[0]}
+                        {this.props.fullcourseInfo.course_Subtitle+" | created by "}<b>{this.props.fullcourseInfo.created_By[0]}</b>
                     </div>
                 </Media>
             </Media>
